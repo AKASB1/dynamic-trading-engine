@@ -73,3 +73,7 @@ See [IMPLEMENTATION.md](IMPLEMENTATION.md).
 ## License
 
 MIT
+
+## Available now
+
+Importable local primitives cover portfolio state, equal-weight targets, order generation, simple market fills, and turnover. Run `PYTHONPATH=src python -m unittest discover -s tests`. Convex optimization and the full execution simulator are planned.

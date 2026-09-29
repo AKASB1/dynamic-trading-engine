@@ -46,3 +46,7 @@ A policy maps current state and target portfolio to orders. Implement simple TWA
 7. baseline execution policies
 8. adaptive policy interface
 9. paper-trading adapter
+
+## Scaffold checkpoint
+
+Portfolio state, order/fill records, an equal-weight baseline, and a spread-adjusted fill helper are implemented. The planned convex optimizer, rolling loop, and paper-trading adapter are not yet built.
