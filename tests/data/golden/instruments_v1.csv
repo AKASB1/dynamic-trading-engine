@@ -1,0 +1,3 @@
+instrument_id,symbol,asset_class,currency,ts_list,ts_delist,delist_return,lot_size,tick_size,sector
+A,A,equity,USD,2024-01-02T21:00:00Z,,,0,0.01,tech
+B,B,equity,USD,2024-01-02T21:00:00Z,,,0,0.01,energy

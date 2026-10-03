@@ -1,0 +1,14 @@
+{
+  "export_files": [
+    "bars.csv",
+    "corporate_actions.csv",
+    "forecasts.csv",
+    "instruments.csv",
+    "liquidity.csv",
+    "returns.csv",
+    "signals.csv"
+  ],
+  "external_export_dir": false,
+  "identical_logs_in_memory_vs_export": true,
+  "rank_export_decisions": 40
+}

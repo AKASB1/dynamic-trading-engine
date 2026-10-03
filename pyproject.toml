@@ -4,18 +4,38 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dynamic-trading-engine"
-version = "0.1.0"
-description = "Dynamic portfolio allocation and execution engine."
+version = "0.2.0"
+description = "Simulation-only decision layer: rolling predict-then-optimize loop, convex portfolio optimizers, multi-period control, and an execution simulator on a synthetic market."
+readme = "README.md"
+license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
   "numpy>=2.0",
-  "polars>=1.8",
-  "pydantic>=2.9",
-  "cvxpy>=1.5",
+  "scipy>=1.13",
+  "cvxpy>=1.6",
+  "matplotlib>=3.8",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.11"]
+dev = ["pytest>=8", "pytest-repeat>=0.9", "ruff>=0.6"]
+
+[project.scripts]
+dynamic-trading-engine = "dynamic_trading_engine.cli.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dynamic_trading_engine"]
 
 [tool.ruff]
 line-length = 100
+target-version = "py312"
+extend-exclude = ["experiments/outputs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E741", "B905"]
+per-file-ignores = {"tests/*" = ["E501", "B023"], "scripts/*" = ["E501"]}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"
+markers = ["slow: longer tests (still part of the default run)"]

@@ -1,0 +1,55 @@
+{
+  "cvxpy": "1.9.3",
+  "frozen_tier2": "experiments\\tuned\\frozen_tier2.json",
+  "git": {
+    "commit": "cc4e22a33c7dd4bc45eab0277d16157dc19cb547",
+    "dirty": false,
+    "results_dirs_excluded": [
+      "experiments/results/",
+      "experiments/outputs/"
+    ]
+  },
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) i9-14900KF",
+    "logical_cpus": 32,
+    "os": "Windows 11",
+    "ram_gb": 102.9
+  },
+  "n_runs": 90,
+  "numpy": "2.5.3",
+  "package_version": "0.2.0",
+  "python": "3.12.3",
+  "registry_tier2_hash": "67f43d3608de89fdf7b8d4b23acf7605bd517eea7c72af5e88331fd033c816f2",
+  "scipy": "1.18.1",
+  "solver_settings": {
+    "clarabel": {
+      "max_threads": 1,
+      "tolerances": "default (1e-8)"
+    },
+    "default": "CLARABEL",
+    "fallback": "SOC form of |z|^1.5 when the power-cone solve fails",
+    "objective_scale": 10000.0,
+    "retries": [
+      {
+        "max_step_fraction": 0.9
+      },
+      {
+        "max_step_fraction": 0.8
+      }
+    ],
+    "warm_start": false
+  },
+  "solvers": {
+    "CLARABEL": "0.11.1",
+    "OSQP": "1.1.3",
+    "SCS": "3.3.1",
+    "cvxpy": "1.9.3"
+  },
+  "threads": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "wall_total_s": 191.3502080999897,
+  "workers": 2
+}

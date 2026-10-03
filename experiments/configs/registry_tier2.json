@@ -1,0 +1,95 @@
+{
+  "gp_experiment": {
+    "compare": [
+      "MV",
+      "MPC"
+    ],
+    "market": "base",
+    "seeds": "S2"
+  },
+  "note": "Tier-2 registry: strategies tuned once with the protocol of S2 (16 trials, tuning seeds 100-103, stream tune.<strategy>) and frozen in experiments/tuned/frozen_tier2.json; results in experiments/results/tier2/.",
+  "schema_version": 1,
+  "strategies": {
+    "GP_AIM": {
+      "space": {
+        "optimizer.gamma": [
+          "log",
+          0.3,
+          300.0
+        ],
+        "optimizer.lam_mult": [
+          "log",
+          0.1,
+          10.0
+        ],
+        "risk": [
+          "choice",
+          [
+            "sample",
+            "ewma",
+            "lw"
+          ]
+        ],
+        "shrink": [
+          "uniform",
+          0.25,
+          1.5
+        ]
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "optimizer": {
+          "name": "gp_aim"
+        }
+      }
+    },
+    "WDRO": {
+      "space": {
+        "optimizer.alpha": [
+          "choice",
+          [
+            0.9,
+            0.95,
+            0.975
+          ]
+        ],
+        "optimizer.cost_scale": [
+          "log",
+          0.25,
+          4.0
+        ],
+        "optimizer.eps_w": [
+          "log",
+          1e-05,
+          0.003
+        ],
+        "optimizer.eta_cvar": [
+          "log",
+          0.0003,
+          0.03
+        ]
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "optimizer": {
+          "name": "wdro"
+        }
+      }
+    }
+  },
+  "wdro_experiment": {
+    "at_bar": 630,
+    "compare": [
+      "MV",
+      "CVAR",
+      "ROBUST"
+    ],
+    "markets": [
+      "base",
+      "shift"
+    ],
+    "seeds": "S5"
+  }
+}

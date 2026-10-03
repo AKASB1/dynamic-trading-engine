@@ -1,0 +1,258 @@
+{
+  "noisy_0.25|0": {
+    "gamma": 0.3,
+    "mean_ce_ann": 0.029338496343443987,
+    "spec": {
+      "book": "LS",
+      "forecast": "noisy_oracle",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 2.1533718606989525,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 0.3,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "rho": 0.25,
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_noisy_0.25",
+      "window": 250
+    }
+  },
+  "noisy_0.25|1": {
+    "gamma": 42.6,
+    "mean_ce_ann": 0.01197696754669582,
+    "spec": {
+      "book": "LS",
+      "forecast": "noisy_oracle",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 0.0,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 42.6,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "rho": 0.25,
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_noisy_0.25_NC",
+      "window": 250
+    }
+  },
+  "noisy_0.5|0": {
+    "gamma": 0.3,
+    "mean_ce_ann": 0.016402095654594155,
+    "spec": {
+      "book": "LS",
+      "forecast": "noisy_oracle",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 2.1533718606989525,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 0.3,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "rho": 0.5,
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_noisy_0.5",
+      "window": 250
+    }
+  },
+  "noisy_0.5|1": {
+    "gamma": 42.6,
+    "mean_ce_ann": 0.016683326928457844,
+    "spec": {
+      "book": "LS",
+      "forecast": "noisy_oracle",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 0.0,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 42.6,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "rho": 0.5,
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_noisy_0.5_NC",
+      "window": 250
+    }
+  },
+  "noisy_0.75|0": {
+    "gamma": 15.8,
+    "mean_ce_ann": 0.008610623545049888,
+    "spec": {
+      "book": "LS",
+      "forecast": "noisy_oracle",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 2.1533718606989525,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 15.8,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "rho": 0.75,
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_noisy_0.75",
+      "window": 250
+    }
+  },
+  "noisy_0.75|1": {
+    "gamma": 15.8,
+    "mean_ce_ann": 0.025011796776658275,
+    "spec": {
+      "book": "LS",
+      "forecast": "noisy_oracle",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 0.0,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 15.8,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "rho": 0.75,
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_noisy_0.75_NC",
+      "window": 250
+    }
+  },
+  "oracle|0": {
+    "gamma": 115.0,
+    "mean_ce_ann": 0.0008856608156565645,
+    "spec": {
+      "book": "LS",
+      "forecast": "oracle",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 2.1533718606989525,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 115.0,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_oracle",
+      "window": 250
+    }
+  },
+  "oracle|1": {
+    "gamma": 15.8,
+    "mean_ce_ann": 0.030117241764802412,
+    "spec": {
+      "book": "LS",
+      "forecast": "oracle",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 0.0,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 15.8,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_oracle_NC",
+      "window": 250
+    }
+  },
+  "plain|0": {
+    "gamma": 300.0,
+    "mean_ce_ann": -0.0007735695033783984,
+    "spec": {
+      "book": "LS",
+      "forecast": "plain",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 2.1533718606989525,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 300.0,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_plain",
+      "window": 250
+    }
+  },
+  "plain|1": {
+    "gamma": 300.0,
+    "mean_ce_ann": -0.0010000439261192583,
+    "spec": {
+      "book": "LS",
+      "forecast": "plain",
+      "hl": 60.0,
+      "min_history": 60,
+      "optimizer": {
+        "H": 5,
+        "alpha": 0.95,
+        "cost_scale": 0.0,
+        "delta": 1.0,
+        "eta_cvar": 0.03,
+        "gamma": 300.0,
+        "kappa_rob": 1.0,
+        "name": "mean_variance",
+        "p_rank": 1.0
+      },
+      "risk": "lw",
+      "shrink": 1.0,
+      "strategy_id": "MV_plain_NC",
+      "window": 250
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "mean_ce_ann": -1.691898030751793e-05,
+  "params": {
+    "optimizer.cost_scale": 2.094502786243415,
+    "optimizer.gamma": 10.519196998184054,
+    "optimizer.kappa_rob": 0.9719547474007698,
+    "risk": "lw"
+  },
+  "seeds": [
+    100,
+    101
+  ],
+  "spec": {
+    "book": "LS",
+    "forecast": "plain",
+    "hl": 60.0,
+    "min_history": 60,
+    "optimizer": {
+      "H": 5,
+      "alpha": 0.95,
+      "cost_scale": 2.094502786243415,
+      "delta": 1.0,
+      "eta_cvar": 0.03,
+      "gamma": 10.519196998184054,
+      "kappa_rob": 0.9719547474007698,
+      "name": "robust_box",
+      "p_rank": 1.0
+    },
+    "risk": "lw",
+    "shrink": 1.0,
+    "strategy_id": "ROBUST",
+    "window": 250
+  },
+  "strategy": "ROBUST",
+  "trial": 2,
+  "trials": 4
+}

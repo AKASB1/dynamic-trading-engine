@@ -1,0 +1,12 @@
+reference,n_problems,max_error,statuses,note
+R1,20,9.946377055314315e-12,optimal:20,"max |w - closed form| / max(1, max|w|)"
+R2,20,7.811529201262601e-13,optimal:20,"max |w - closed form| / max(1, max|w|)"
+R3,20,3.9932635012932784e-13,optimal:20,"max |w - closed form| / max(1, max|w|)"
+R4,150,3.260557715215523e-16,exact:150,Rockafellar-Uryasev value vs the definition (no solve)
+R5,20,8.703243410332351e-07,optimal:40,robust object with kappa ~ 0 vs mean_variance (weights)
+R6 closed form,4,2.1590120747950759e-16,exact:4,"A, B, a, aim vs the known answer"
+R6 controller H=60,20,3.652078506593221e-15,optimal:20,first action vs the closed-form policy (relative)
+R6 grid DP,66,0.5569930301460231,exact:66,policy deviation in grid steps (bound: 1)
+R7 grid DP (c -> 0),66,0.2552515755251947,exact:66,policy vs mu/g in grid steps (bound: 1)
+R8 known answer 1,4,3.647410607903085e-15,exact:3 optimal:1,"kappa, objective; QP and linear solve objective"
+R8 known answer 2,4,5.593920619787449e-15,exact:3 optimal:1,"kappa, objective; QP and linear solve objective"

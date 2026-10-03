@@ -1,0 +1,2 @@
+fill_id,order_id,ts_fill,instrument_id,quantity,ref_price,price,spread_cost,impact_cost,commission
+f1,o1,2024-03-05T14:30:00Z,A,100,101.5,101.53045,2.03,1.015,1.015

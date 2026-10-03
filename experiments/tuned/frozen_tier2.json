@@ -1,0 +1,2316 @@
+{
+  "entries": [
+    {
+      "experiment": "T2_WDRO_base",
+      "hash": "214735f5c9ead0b99fce1cc821afce9ea830f706caedb810ef76a497a36efd5b",
+      "id": "T2_WDRO_base/WDRO",
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.975,
+          "cost_scale": 0.3510033370991347,
+          "delta": 1.0,
+          "eps_w": 0.00028839253461310406,
+          "eta_cvar": 0.009023334411046087,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "wdro",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "WDRO",
+        "window": 250
+      },
+      "variant": "WDRO"
+    },
+    {
+      "experiment": "T2_WDRO_shift",
+      "hash": "82e794eed81e2362db4f5d3b5ae5cc4a7be6b70efb2cc5c38441f5cfae079170",
+      "id": "T2_WDRO_shift/WDRO",
+      "market": "shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.975,
+          "cost_scale": 0.3510033370991347,
+          "delta": 1.0,
+          "eps_w": 0.00028839253461310406,
+          "eta_cvar": 0.009023334411046087,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "wdro",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "WDRO",
+        "window": 250
+      },
+      "variant": "WDRO"
+    },
+    {
+      "experiment": "T2_GP",
+      "hash": "d1c6427e6fd2a86304bea1fe2de789e9fe83841ee4ed9f96241ee530dea519e6",
+      "id": "T2_GP/GP_AIM",
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 4.962598447015047,
+          "kappa_rob": 1.0,
+          "lam_mult": 2.0086386695403315,
+          "name": "gp_aim",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 1.486932450739309,
+        "strategy_id": "GP_AIM",
+        "window": 250
+      },
+      "variant": "GP_AIM"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "755bd7d482ca41e5f47b012a652a386768d14d1ec7d7b9858fd0a6317828d008",
+      "id": "T2_TAILS/base_t5|EW",
+      "loop": {},
+      "market": "base_t5",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "base_t5|EW"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "38b660b339e7e591aaee3fc52acac777d850f53e564f6ebb965cd27e1becf36e",
+      "id": "T2_TAILS/base_t5|MV",
+      "loop": {},
+      "market": "base_t5",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "base_t5|MV"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "a7fd644e9383cdcbc400adfdd51c261145563e10f1206096fd8b31499908bdff",
+      "id": "T2_TAILS/base_t5|CVAR",
+      "loop": {},
+      "market": "base_t5",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.975,
+          "cost_scale": 3.0614538839765033,
+          "delta": 1.0,
+          "eta_cvar": 0.010317051608807325,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.006732217307441,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "base_t5|CVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "e89a7e4487e3604a7aedaf6b79a923af67a18cbc23d7f8d3979a3800a241f54d",
+      "id": "T2_TAILS/base_t5|ROBUST",
+      "loop": {},
+      "market": "base_t5",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.4849791250541012,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 5.756874223555408,
+          "kappa_rob": 0.53536758672772,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "base_t5|ROBUST"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "df317d3462976748e7690d0e88218a83735167f51656ef76abf02011e90379b9",
+      "id": "T2_TAILS/shift_t5|EW",
+      "loop": {},
+      "market": "shift_t5",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "shift_t5|EW"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "9839b7ce80d739674703d3743dc92728a65fb70273e415dc0f2812501a1dc16d",
+      "id": "T2_TAILS/shift_t5|MV",
+      "loop": {},
+      "market": "shift_t5",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "shift_t5|MV"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "645f865e11814df30cfd71f6dcf09cb457ea26604207257ca0a11c08f9e83419",
+      "id": "T2_TAILS/shift_t5|CVAR",
+      "loop": {},
+      "market": "shift_t5",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.975,
+          "cost_scale": 3.0614538839765033,
+          "delta": 1.0,
+          "eta_cvar": 0.010317051608807325,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.006732217307441,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "shift_t5|CVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "159f6f0d0cf24e77c323646443c6cce4fe595171c12cbbd6621029e2e9949188",
+      "id": "T2_TAILS/shift_t5|ROBUST",
+      "loop": {},
+      "market": "shift_t5",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.4849791250541012,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 5.756874223555408,
+          "kappa_rob": 0.53536758672772,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "shift_t5|ROBUST"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "bcdcea4e652dbfd995cc33b5e4688dfc0599338a031f537461932ea792a0965b",
+      "id": "T2_TAILS/base_jump|EW",
+      "loop": {},
+      "market": "base_jump",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "base_jump|EW"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "4e1e63e3454c863e363e1d620a6841c161eab433ef216376cd2df01f2f0be5bb",
+      "id": "T2_TAILS/base_jump|MV",
+      "loop": {},
+      "market": "base_jump",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "base_jump|MV"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "18b7d496657f05ce5f69d6c6e292345eaf244853da718ef5964b18517a976b50",
+      "id": "T2_TAILS/base_jump|CVAR",
+      "loop": {},
+      "market": "base_jump",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.975,
+          "cost_scale": 3.0614538839765033,
+          "delta": 1.0,
+          "eta_cvar": 0.010317051608807325,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.006732217307441,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "base_jump|CVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "2face781d843b762a4ff3defea7514c60bec2152a9341105625a0f649d6d7b36",
+      "id": "T2_TAILS/base_jump|ROBUST",
+      "loop": {},
+      "market": "base_jump",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.4849791250541012,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 5.756874223555408,
+          "kappa_rob": 0.53536758672772,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "base_jump|ROBUST"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "a28486d3ddd947db0b403ffd2b98f56716c0fd9ba4e4fa478eb7fbb363ac5334",
+      "id": "T2_TAILS/shift_jump|EW",
+      "loop": {},
+      "market": "shift_jump",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "shift_jump|EW"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "d16b3fd624db6df5fff78b07450e6f435ac8590da58646ccbca83103c022c030",
+      "id": "T2_TAILS/shift_jump|MV",
+      "loop": {},
+      "market": "shift_jump",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "shift_jump|MV"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "8f1a33b81a29553eac0bd4bef8d03a0978972b025ae16eda0a615f77861f9ed2",
+      "id": "T2_TAILS/shift_jump|CVAR",
+      "loop": {},
+      "market": "shift_jump",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.975,
+          "cost_scale": 3.0614538839765033,
+          "delta": 1.0,
+          "eta_cvar": 0.010317051608807325,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.006732217307441,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "shift_jump|CVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_TAILS",
+      "hash": "483208c9c25f2835938a331d3106f14e072cba96c23e2488c2fe1ece646cc8be",
+      "id": "T2_TAILS/shift_jump|ROBUST",
+      "loop": {},
+      "market": "shift_jump",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.4849791250541012,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 5.756874223555408,
+          "kappa_rob": 0.53536758672772,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "shift_jump|ROBUST"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "72de736aad51dd75e7eedb754697d194ac4274be5fd9630d0533d5dec10e81ce",
+      "id": "T2_COSTMIS/y=0.25|capital=1e+07|belief=0.5",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.25|capital=1e+07|belief=0.5"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "f8927c7ce0346e84cb63e5f3a4b34be1ddd7caf06b987e8601f18c57dbf0f492",
+      "id": "T2_COSTMIS/y=0.25|capital=1e+07|belief=1",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.25|capital=1e+07|belief=1"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "6b44ef61281cd2dc8bb488fbd49c791969eb3fa26828db603f7ef80f6516cd7f",
+      "id": "T2_COSTMIS/y=0.25|capital=1e+07|belief=2",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.25|capital=1e+07|belief=2"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "8129aae690809063620a07ea42a35d6f82470a51e16efafccfe8acc1e213f002",
+      "id": "T2_COSTMIS/y=0.25|capital=1e+08|belief=0.5",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.25|capital=1e+08|belief=0.5"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "8a8f7a2af298c15e4a5d7cb42c548f0ce0a833ee3bfafaedca5afbce34e52435",
+      "id": "T2_COSTMIS/y=0.25|capital=1e+08|belief=1",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.25|capital=1e+08|belief=1"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "7879de2137abe83e80b02843bb7baa937289e039c75387882d0e21908f4c49cf",
+      "id": "T2_COSTMIS/y=0.25|capital=1e+08|belief=2",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.25|capital=1e+08|belief=2"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.5
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "92f3dc1ecb3ce3b84f1390fa371535f6eb195c50a818124d51ba05cc6c6f0c77",
+      "id": "T2_COSTMIS/y=0.5|capital=1e+07|belief=0.5",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.5|capital=1e+07|belief=0.5"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.5
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "a0dfa84f73f3187a8c2f4857a6519402437d10c26ffd0d5374bf8f5274619f97",
+      "id": "T2_COSTMIS/y=0.5|capital=1e+07|belief=1",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.5|capital=1e+07|belief=1"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.5
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "a53cdc4cd8f5aabf5d22d0385e13de86453fcf04062c9ad5d59e64983f7d9c06",
+      "id": "T2_COSTMIS/y=0.5|capital=1e+07|belief=2",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.5|capital=1e+07|belief=2"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.5
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "0012b9db5ba75b1a42d6668b0026678d50cfbdcaafb97992a87f3368b45f6743",
+      "id": "T2_COSTMIS/y=0.5|capital=1e+08|belief=0.5",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.5|capital=1e+08|belief=0.5"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.5
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "29d3c708937866ba02a9637ff561350128abd1145238323e7536be9db1d84836",
+      "id": "T2_COSTMIS/y=0.5|capital=1e+08|belief=1",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.5|capital=1e+08|belief=1"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 0.5
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "f9320e0d785bfbebf368bd215f4087c2fa3ee41d15b0cb05a79d677f0efba32a",
+      "id": "T2_COSTMIS/y=0.5|capital=1e+08|belief=2",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=0.5|capital=1e+08|belief=2"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "0bec4e6a5e35e1b34a31d6735341e6bfdb12b745d99d0cf73a570d5240836edb",
+      "id": "T2_COSTMIS/y=1|capital=1e+07|belief=0.5",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=1|capital=1e+07|belief=0.5"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "61679a7d9350935359a4251d2cb57e53177465a5ef3b7e83e3e02c9ad40f76b8",
+      "id": "T2_COSTMIS/y=1|capital=1e+07|belief=1",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=1|capital=1e+07|belief=1"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "79e55b889aa60c8d25301ea7b60f2079df304a69147e09eccdef12f2f04d47eb",
+      "id": "T2_COSTMIS/y=1|capital=1e+07|belief=2",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=1|capital=1e+07|belief=2"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "0b36734279a57242f16ed2aa90dc19e6675ce462f75ff129179475cfb66df51c",
+      "id": "T2_COSTMIS/y=1|capital=1e+08|belief=0.5",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=1|capital=1e+08|belief=0.5"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "7d64a0e0b83b920ef2c7e236c0bfb842a136376d402baa082223d2da9295b3f7",
+      "id": "T2_COSTMIS/y=1|capital=1e+08|belief=1",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=1|capital=1e+08|belief=1"
+    },
+    {
+      "costs": {
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "T2_COSTMIS",
+      "hash": "01b600a88ffaad27d300f37cc939d0b122c41af1e6d2eb23eb467f9759d55eb8",
+      "id": "T2_COSTMIS/y=1|capital=1e+08|belief=2",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "y=1|capital=1e+08|belief=2"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "d6e1a259bcb30c61f3dfd1756668e38f27e1e1eb963c424040928294ccaf77a6",
+      "id": "T2_CAPACITY/MV|1e+06",
+      "loop": {
+        "initial_cash": 1000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "MV|1e+06"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "2bf48c4df1b4f64e5141a185cf38d43eccc754f870eed4190c9fcedf5aca7187",
+      "id": "T2_CAPACITY/MV|1e+07",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "MV|1e+07"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "7fa6c6e1136f55f37c3082ccb6ab0091d6190a351e99268bec818a9f3dfd365c",
+      "id": "T2_CAPACITY/MV|3e+07",
+      "loop": {
+        "initial_cash": 30000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "MV|3e+07"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "0e8a4d6f484287d1c6cb91955e669b6e07db1ff290a3f29edc299c9e390facae",
+      "id": "T2_CAPACITY/MV|1e+08",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "MV|1e+08"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "0c8499863f8995e8f2c65bd04ac9e6d997cc712291e461a8cc2dcacddfa7c184",
+      "id": "T2_CAPACITY/MV|3e+08",
+      "loop": {
+        "initial_cash": 300000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "MV|3e+08"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "25131142927087c153b56eea21d1f81ee2c87c3aa7db8732e09a237f92071445",
+      "id": "T2_CAPACITY/MV|1e+09",
+      "loop": {
+        "initial_cash": 1000000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.3633112448185298,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 12.333367878544168,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 0.8701650250303481,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "MV|1e+09"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "5985661e6a061420252b5806bca34dbacc1f515bf1341745196f173f2187030a",
+      "id": "T2_CAPACITY/RANK_LS|1e+06",
+      "loop": {
+        "initial_cash": 1000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 2.324329637942033
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "RANK_LS|1e+06"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "067ac6c3179d7bb723c7379cd8c8fc53f89a154b8f003d26d843b1592a28a0be",
+      "id": "T2_CAPACITY/RANK_LS|1e+07",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 2.324329637942033
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "RANK_LS|1e+07"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "0dc0fd3ce2b022b46b97cdb2367ddaa8a775f4b86b2f631bcd16e0b48ca4945a",
+      "id": "T2_CAPACITY/RANK_LS|3e+07",
+      "loop": {
+        "initial_cash": 30000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 2.324329637942033
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "RANK_LS|3e+07"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "e9ea582360b78361fb3bfe5618e122eccb46a5664408daf11937881f6c3f9668",
+      "id": "T2_CAPACITY/RANK_LS|1e+08",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 2.324329637942033
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "RANK_LS|1e+08"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "51403cfc4a4d1ae5992bf9682d3345077f320329e23513ae8bb3e4f8d8ddf02e",
+      "id": "T2_CAPACITY/RANK_LS|3e+08",
+      "loop": {
+        "initial_cash": 300000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 2.324329637942033
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "RANK_LS|3e+08"
+    },
+    {
+      "costs": {},
+      "experiment": "T2_CAPACITY",
+      "hash": "bc5889412454f4f1ce7ab61829ad963b26aea90757329fc538f44965f75d9d54",
+      "id": "T2_CAPACITY/RANK_LS|1e+09",
+      "loop": {
+        "initial_cash": 1000000000.0
+      },
+      "market": "base",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 2.324329637942033
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "RANK_LS|1e+09"
+    }
+  ],
+  "hashes": [
+    "0012b9db5ba75b1a42d6668b0026678d50cfbdcaafb97992a87f3368b45f6743",
+    "01b600a88ffaad27d300f37cc939d0b122c41af1e6d2eb23eb467f9759d55eb8",
+    "067ac6c3179d7bb723c7379cd8c8fc53f89a154b8f003d26d843b1592a28a0be",
+    "0b36734279a57242f16ed2aa90dc19e6675ce462f75ff129179475cfb66df51c",
+    "0bec4e6a5e35e1b34a31d6735341e6bfdb12b745d99d0cf73a570d5240836edb",
+    "0c8499863f8995e8f2c65bd04ac9e6d997cc712291e461a8cc2dcacddfa7c184",
+    "0dc0fd3ce2b022b46b97cdb2367ddaa8a775f4b86b2f631bcd16e0b48ca4945a",
+    "0e8a4d6f484287d1c6cb91955e669b6e07db1ff290a3f29edc299c9e390facae",
+    "159f6f0d0cf24e77c323646443c6cce4fe595171c12cbbd6621029e2e9949188",
+    "18b7d496657f05ce5f69d6c6e292345eaf244853da718ef5964b18517a976b50",
+    "214735f5c9ead0b99fce1cc821afce9ea830f706caedb810ef76a497a36efd5b",
+    "25131142927087c153b56eea21d1f81ee2c87c3aa7db8732e09a237f92071445",
+    "29d3c708937866ba02a9637ff561350128abd1145238323e7536be9db1d84836",
+    "2bf48c4df1b4f64e5141a185cf38d43eccc754f870eed4190c9fcedf5aca7187",
+    "2face781d843b762a4ff3defea7514c60bec2152a9341105625a0f649d6d7b36",
+    "38b660b339e7e591aaee3fc52acac777d850f53e564f6ebb965cd27e1becf36e",
+    "483208c9c25f2835938a331d3106f14e072cba96c23e2488c2fe1ece646cc8be",
+    "4e1e63e3454c863e363e1d620a6841c161eab433ef216376cd2df01f2f0be5bb",
+    "51403cfc4a4d1ae5992bf9682d3345077f320329e23513ae8bb3e4f8d8ddf02e",
+    "5985661e6a061420252b5806bca34dbacc1f515bf1341745196f173f2187030a",
+    "61679a7d9350935359a4251d2cb57e53177465a5ef3b7e83e3e02c9ad40f76b8",
+    "645f865e11814df30cfd71f6dcf09cb457ea26604207257ca0a11c08f9e83419",
+    "6b44ef61281cd2dc8bb488fbd49c791969eb3fa26828db603f7ef80f6516cd7f",
+    "72de736aad51dd75e7eedb754697d194ac4274be5fd9630d0533d5dec10e81ce",
+    "755bd7d482ca41e5f47b012a652a386768d14d1ec7d7b9858fd0a6317828d008",
+    "7879de2137abe83e80b02843bb7baa937289e039c75387882d0e21908f4c49cf",
+    "79e55b889aa60c8d25301ea7b60f2079df304a69147e09eccdef12f2f04d47eb",
+    "7d64a0e0b83b920ef2c7e236c0bfb842a136376d402baa082223d2da9295b3f7",
+    "7fa6c6e1136f55f37c3082ccb6ab0091d6190a351e99268bec818a9f3dfd365c",
+    "8129aae690809063620a07ea42a35d6f82470a51e16efafccfe8acc1e213f002",
+    "82e794eed81e2362db4f5d3b5ae5cc4a7be6b70efb2cc5c38441f5cfae079170",
+    "8a8f7a2af298c15e4a5d7cb42c548f0ce0a833ee3bfafaedca5afbce34e52435",
+    "8f1a33b81a29553eac0bd4bef8d03a0978972b025ae16eda0a615f77861f9ed2",
+    "92f3dc1ecb3ce3b84f1390fa371535f6eb195c50a818124d51ba05cc6c6f0c77",
+    "9839b7ce80d739674703d3743dc92728a65fb70273e415dc0f2812501a1dc16d",
+    "a0dfa84f73f3187a8c2f4857a6519402437d10c26ffd0d5374bf8f5274619f97",
+    "a28486d3ddd947db0b403ffd2b98f56716c0fd9ba4e4fa478eb7fbb363ac5334",
+    "a53cdc4cd8f5aabf5d22d0385e13de86453fcf04062c9ad5d59e64983f7d9c06",
+    "a7fd644e9383cdcbc400adfdd51c261145563e10f1206096fd8b31499908bdff",
+    "bc5889412454f4f1ce7ab61829ad963b26aea90757329fc538f44965f75d9d54",
+    "bcdcea4e652dbfd995cc33b5e4688dfc0599338a031f537461932ea792a0965b",
+    "d16b3fd624db6df5fff78b07450e6f435ac8590da58646ccbca83103c022c030",
+    "d1c6427e6fd2a86304bea1fe2de789e9fe83841ee4ed9f96241ee530dea519e6",
+    "d6e1a259bcb30c61f3dfd1756668e38f27e1e1eb963c424040928294ccaf77a6",
+    "df317d3462976748e7690d0e88218a83735167f51656ef76abf02011e90379b9",
+    "e89a7e4487e3604a7aedaf6b79a923af67a18cbc23d7f8d3979a3800a241f54d",
+    "e9ea582360b78361fb3bfe5618e122eccb46a5664408daf11937881f6c3f9668",
+    "f8927c7ce0346e84cb63e5f3a4b34be1ddd7caf06b987e8601f18c57dbf0f492",
+    "f9320e0d785bfbebf368bd215f4087c2fa3ee41d15b0cb05a79d677f0efba32a"
+  ],
+  "log": [
+    {
+      "config_hash": "5e14a7be983193c8ee9c8e90f05f88808e821151e543368646645952cf942562",
+      "mean_ce_ann": -0.022116703213477588,
+      "params": {
+        "optimizer.alpha": 0.975,
+        "optimizer.cost_scale": 0.8811435727348612,
+        "optimizer.eps_w": 0.0004388039683740939,
+        "optimizer.eta_cvar": 0.007695496252862657
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 0
+    },
+    {
+      "config_hash": "c8cd1973606e0ec821e15a32203d6947258e9f77c31d16c04be3cea4cffa65dc",
+      "mean_ce_ann": -0.02605216235924126,
+      "params": {
+        "optimizer.alpha": 0.975,
+        "optimizer.cost_scale": 1.2699289076914007,
+        "optimizer.eps_w": 4.580504550207904e-05,
+        "optimizer.eta_cvar": 0.013016393189706993
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 1
+    },
+    {
+      "config_hash": "eac07be9006f1fbd4366373f067bc7cf63a66c6862060fed37a937c29b1236c2",
+      "mean_ce_ann": 0.000623069017927061,
+      "params": {
+        "optimizer.alpha": 0.975,
+        "optimizer.cost_scale": 1.8304024961097622,
+        "optimizer.eps_w": 0.0017985876494977942,
+        "optimizer.eta_cvar": 0.009940387276850517
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 2
+    },
+    {
+      "config_hash": "1c9587907b1d19428b52078b39c669b846fc4c94dafa8da4d90fe905f46f9ce1",
+      "mean_ce_ann": -0.00449668702141209,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 0.313387476334353,
+        "optimizer.eps_w": 6.912366679954369e-05,
+        "optimizer.eta_cvar": 0.027168276355754903
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 3
+    },
+    {
+      "config_hash": "2bd98c6c266b0300626de59d4900ff3db27d6a68020ddbe47a703eb5ab00c82d",
+      "mean_ce_ann": -0.004792990686599734,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 0.7545838339333971,
+        "optimizer.eps_w": 0.00066732567555459,
+        "optimizer.eta_cvar": 0.024492420490545442
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 4
+    },
+    {
+      "config_hash": "47cdd627e7a464db46d3767d4ee7b46be67248bc6fcf8dab0ffaa954f5ab776a",
+      "mean_ce_ann": -0.003372317288416954,
+      "params": {
+        "optimizer.alpha": 0.975,
+        "optimizer.cost_scale": 0.3519677373442005,
+        "optimizer.eps_w": 4.6410665251763715e-05,
+        "optimizer.eta_cvar": 0.006943728914963652
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 5
+    },
+    {
+      "config_hash": "971e84905c04f5d7a34a53738815b069d0236cbedbf3415557b10b1ab2c96df4",
+      "mean_ce_ann": -0.016084555021152254,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 1.3510375183905974,
+        "optimizer.eps_w": 0.00024946252226709827,
+        "optimizer.eta_cvar": 0.019415886151562693
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 6
+    },
+    {
+      "config_hash": "2b6376c06d520b4429c60deaca9b01d0a853042f56bcf5778f0ff1b1ba65ae54",
+      "mean_ce_ann": -0.01509899984682165,
+      "params": {
+        "optimizer.alpha": 0.975,
+        "optimizer.cost_scale": 1.6145024640838483,
+        "optimizer.eps_w": 2.043970935084854e-05,
+        "optimizer.eta_cvar": 0.002162526876039569
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 7
+    },
+    {
+      "config_hash": "07b39c63e15645f66df1b0e318086e3fc273f62a5bed245a209a341a05c2dee7",
+      "mean_ce_ann": -0.010739941944290147,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 0.3094963885419177,
+        "optimizer.eps_w": 4.2615332329423256e-05,
+        "optimizer.eta_cvar": 0.0008760691836199373
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 8
+    },
+    {
+      "config_hash": "8f0d7adb28904c9b18fbf84f842d0211b92325a1b16fef2f5ca011f197a548dc",
+      "mean_ce_ann": -0.01999436543157851,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 0.47375507179396953,
+        "optimizer.eps_w": 2.6128830397211782e-05,
+        "optimizer.eta_cvar": 0.0007516442907469766
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 9
+    },
+    {
+      "config_hash": "f9c2471421794901ca72a4ab00a336a849295688fa749c94ad93cf7929119065",
+      "mean_ce_ann": -0.05606171430837851,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 0.6964067784227357,
+        "optimizer.eps_w": 0.0002584271501775051,
+        "optimizer.eta_cvar": 0.0023965324824243
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 10
+    },
+    {
+      "config_hash": "45e58d62eb7fcc27ea886f843c75a43631f80d1827e007babc6d4374aad061a5",
+      "mean_ce_ann": -0.04558947334478015,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 1.166804626601096,
+        "optimizer.eps_w": 2.6483921872691218e-05,
+        "optimizer.eta_cvar": 0.000683237397053227
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 11
+    },
+    {
+      "config_hash": "05bde299a2603919e774fbea767463e13b01311e6e2f322f60c5cd5c8be15ed4",
+      "mean_ce_ann": -0.0012419519923178388,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 0.5648421667480037,
+        "optimizer.eps_w": 0.0018710268479216203,
+        "optimizer.eta_cvar": 0.02035309155714995
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 12
+    },
+    {
+      "config_hash": "5b29f30a7f34990f79fb24da0f0604b0058a2eba82a9b02dd40e0b9f481fe27d",
+      "mean_ce_ann": -0.03490940865276633,
+      "params": {
+        "optimizer.alpha": 0.95,
+        "optimizer.cost_scale": 1.0261835182091403,
+        "optimizer.eps_w": 0.00010611861232689393,
+        "optimizer.eta_cvar": 0.0122952896750209
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 13
+    },
+    {
+      "config_hash": "214735f5c9ead0b99fce1cc821afce9ea830f706caedb810ef76a497a36efd5b",
+      "mean_ce_ann": 0.008247726442628146,
+      "params": {
+        "optimizer.alpha": 0.975,
+        "optimizer.cost_scale": 0.3510033370991347,
+        "optimizer.eps_w": 0.00028839253461310406,
+        "optimizer.eta_cvar": 0.009023334411046087
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 14
+    },
+    {
+      "config_hash": "f1d0c3b717f1cffb2adb1f170cae728aaca3d67c98ea41de45f7de3e7f440baa",
+      "mean_ce_ann": 0.004446761050607913,
+      "params": {
+        "optimizer.alpha": 0.975,
+        "optimizer.cost_scale": 3.528241286871057,
+        "optimizer.eps_w": 5.30583637354798e-05,
+        "optimizer.eta_cvar": 0.0004214491181493285
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "WDRO",
+      "trial": 15
+    },
+    {
+      "config_hash": "8cae2e122a4f7c20b2f13cd913078d27af3e18be5d697827cf083d7bce33383a",
+      "mean_ce_ann": 0.0006874389479408352,
+      "params": {
+        "optimizer.gamma": 17.488524751306798,
+        "optimizer.lam_mult": 9.684448109604475,
+        "risk": "lw",
+        "shrink": 0.6413275972844611
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 0
+    },
+    {
+      "config_hash": "f887f21e35fb52fb7efbeb6fe5b5d51c0e4af9fa1ebfb8852e7f37de1f6d5214",
+      "mean_ce_ann": 0.004613060407984232,
+      "params": {
+        "optimizer.gamma": 1.1777550213485481,
+        "optimizer.lam_mult": 0.4575463244731834,
+        "risk": "lw",
+        "shrink": 0.8621716807703181
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 1
+    },
+    {
+      "config_hash": "5aa6d59e072bde15581bc0dc346b11fdea9a5c1ba7737fb556cf394e817da73b",
+      "mean_ce_ann": 0.004525491271490115,
+      "params": {
+        "optimizer.gamma": 2.119111585923902,
+        "optimizer.lam_mult": 0.8903334235306357,
+        "risk": "ewma",
+        "shrink": 1.1348020407277568
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 2
+    },
+    {
+      "config_hash": "d1c6427e6fd2a86304bea1fe2de789e9fe83841ee4ed9f96241ee530dea519e6",
+      "mean_ce_ann": 0.007529257252826307,
+      "params": {
+        "optimizer.gamma": 4.962598447015047,
+        "optimizer.lam_mult": 2.0086386695403315,
+        "risk": "ewma",
+        "shrink": 1.486932450739309
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 3
+    },
+    {
+      "config_hash": "7c0d9a10ac3205e535348afa732a608f0d712f201c34956902d6ed067a1c5ec1",
+      "mean_ce_ann": -0.009730948911968178,
+      "params": {
+        "optimizer.gamma": 0.5013996121266033,
+        "optimizer.lam_mult": 4.478633497297434,
+        "risk": "ewma",
+        "shrink": 1.2486766991577067
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 4
+    },
+    {
+      "config_hash": "87e2602b8f399924066323383c72969ecaa98ba4891d63fa2863ca99e23f1628",
+      "mean_ce_ann": 0.0006707375356095795,
+      "params": {
+        "optimizer.gamma": 106.73093487047751,
+        "optimizer.lam_mult": 5.103544736318107,
+        "risk": "lw",
+        "shrink": 0.8315186263809223
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 5
+    },
+    {
+      "config_hash": "fe1f13af7721d31c2de3142270b7edd5f6d0413246736d4e0d8688d3ecfa094a",
+      "mean_ce_ann": -0.0069296492528295225,
+      "params": {
+        "optimizer.gamma": 0.694025809817364,
+        "optimizer.lam_mult": 0.2332613471565076,
+        "risk": "sample",
+        "shrink": 0.7315952664118784
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 6
+    },
+    {
+      "config_hash": "858a3a2b051d860ab8eea0ca907961b1b018bda0ff3804aaba6de800f6d964b7",
+      "mean_ce_ann": 0.0007018303480687737,
+      "params": {
+        "optimizer.gamma": 31.160806657595234,
+        "optimizer.lam_mult": 0.36455897803377024,
+        "risk": "lw",
+        "shrink": 0.4952524193748237
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 7
+    },
+    {
+      "config_hash": "e15bafc319940fd0040830b0a01c67e85880b44a35ad5bb20d4d707d75ea924f",
+      "mean_ce_ann": -0.009243705482243854,
+      "params": {
+        "optimizer.gamma": 9.210309075148055,
+        "optimizer.lam_mult": 0.17893667559883858,
+        "risk": "lw",
+        "shrink": 1.386907002785306
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 8
+    },
+    {
+      "config_hash": "b98d1bbc91d09298353d26d727933b6d272865196788359ceb0e9c11b7bfa820",
+      "mean_ce_ann": -0.00811756081596002,
+      "params": {
+        "optimizer.gamma": 0.40184373932465733,
+        "optimizer.lam_mult": 5.306798380492962,
+        "risk": "ewma",
+        "shrink": 0.8881721008286189
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 9
+    },
+    {
+      "config_hash": "28872752db439c3473dc1fec7c2fbec884e397688520aed3b05b32b3bb92e0bc",
+      "mean_ce_ann": -0.0018908685285056496,
+      "params": {
+        "optimizer.gamma": 0.9553879941830238,
+        "optimizer.lam_mult": 4.978762669707349,
+        "risk": "sample",
+        "shrink": 0.7787747462523138
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 10
+    },
+    {
+      "config_hash": "fbf844c375fa2a2328a9821194a354b2b280b82ce4309bfb5202477ab5c0c39e",
+      "mean_ce_ann": 0.000275607456696834,
+      "params": {
+        "optimizer.gamma": 101.22086099900554,
+        "optimizer.lam_mult": 0.6590462523322912,
+        "risk": "lw",
+        "shrink": 1.3796063571828447
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 11
+    },
+    {
+      "config_hash": "59174e5e8d43efb8d466ef718af41cc2543117ca7f183980dae1a506d296feb3",
+      "mean_ce_ann": -0.003969741533925329,
+      "params": {
+        "optimizer.gamma": 0.39432796303614337,
+        "optimizer.lam_mult": 7.9064585119755435,
+        "risk": "lw",
+        "shrink": 0.8517543015330575
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 12
+    },
+    {
+      "config_hash": "bddd83c81f67354ffa475e715b257ecf5c2ed330aa5cc6710d5eb51bb6f935e8",
+      "mean_ce_ann": 0.0033797397714158753,
+      "params": {
+        "optimizer.gamma": 2.3386573131055064,
+        "optimizer.lam_mult": 1.7384881707834812,
+        "risk": "ewma",
+        "shrink": 0.3674851552242462
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 13
+    },
+    {
+      "config_hash": "3550b4e1a84665b88796da860eb89ce63525b26eea28ccf5ab42dd87da5e0afd",
+      "mean_ce_ann": 0.0014919729414766927,
+      "params": {
+        "optimizer.gamma": 3.6012255968158695,
+        "optimizer.lam_mult": 2.9106426361698876,
+        "risk": "ewma",
+        "shrink": 0.2753066157463423
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 14
+    },
+    {
+      "config_hash": "bfb9207a4aefb3289bcc3867ce1c2f07f258cb8aab453fdf287e8676868b3df7",
+      "mean_ce_ann": 0.001800993379310649,
+      "params": {
+        "optimizer.gamma": 19.11367485818212,
+        "optimizer.lam_mult": 7.4420339337638515,
+        "risk": "sample",
+        "shrink": 0.818921464106773
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103
+      ],
+      "strategy": "GP_AIM",
+      "trial": 15
+    }
+  ],
+  "tuned": {
+    "GP_AIM": {
+      "mean_ce_ann": 0.007529257252826307,
+      "params": {
+        "optimizer.gamma": 4.962598447015047,
+        "optimizer.lam_mult": 2.0086386695403315,
+        "risk": "ewma",
+        "shrink": 1.486932450739309
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 4.962598447015047,
+          "kappa_rob": 1.0,
+          "lam_mult": 2.0086386695403315,
+          "name": "gp_aim",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 1.486932450739309,
+        "strategy_id": "GP_AIM",
+        "window": 250
+      },
+      "trial": 3
+    },
+    "WDRO": {
+      "mean_ce_ann": 0.008247726442628146,
+      "params": {
+        "optimizer.alpha": 0.975,
+        "optimizer.cost_scale": 0.3510033370991347,
+        "optimizer.eps_w": 0.00028839253461310406,
+        "optimizer.eta_cvar": 0.009023334411046087
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.975,
+          "cost_scale": 0.3510033370991347,
+          "delta": 1.0,
+          "eps_w": 0.00028839253461310406,
+          "eta_cvar": 0.009023334411046087,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "wdro",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "WDRO",
+        "window": 250
+      },
+      "trial": 14
+    }
+  }
+}

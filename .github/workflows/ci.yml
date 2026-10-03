@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PYTHONUTF8: "1"
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install --disable-pip-version-check -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check src tests scripts
+          ruff format --check src tests scripts
+      - name: Tests
+        run: python -m pytest -q
+      - name: Quick experiments
+        run: python -m dynamic_trading_engine experiment --quick --workers 2
+      - name: Validate the logs of the quick experiments
+        run: python -m dynamic_trading_engine validate --root experiments/outputs/quick/logs
+      - name: Information audit
+        run: python -m dynamic_trading_engine audit --out experiments/outputs/audit_table.csv

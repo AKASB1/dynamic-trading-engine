@@ -1,0 +1,3021 @@
+{
+  "entries": [
+    {
+      "experiment": "S1",
+      "hash": "9bd445d396e4c9b3e0d41a26b45af2505734806edbe0f081c1b7ad19bcea3519",
+      "id": "S1/registry",
+      "variant": "registry"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "e5dc303be225b5c6093ba95c3c3f251c8cb33adad193bf4ab16b256903c7b4ab",
+      "id": "S2/CASH",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cash",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "CASH",
+        "window": 250
+      },
+      "variant": "CASH"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "f7adbb05eeff2167cc0b1d89e6cf4e69b5a1b4e5bf5913570229658cf6e3374d",
+      "id": "S2/CVAR",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.9,
+          "cost_scale": 2.5361188772753627,
+          "delta": 1.0,
+          "eta_cvar": 0.0003000751615494042,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0961456713280961,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "CVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "695d7bfa0a623669a938ca8dcbc7c3571d898212c35b62bbf5d82588ed2fa8b9",
+      "id": "S2/EW",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "EW"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "95d030a14e615cb21c361b6a29d1d5c46cc68657bdd6435986fc4fbe92820373",
+      "id": "S2/MINVAR",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 62.18706061521437,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR",
+        "window": 60
+      },
+      "variant": "MINVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "cfb3c0751fd01ab1f73fd3ba38f8108c345883dbde6e5311d3eea3fdc1342f69",
+      "id": "S2/MPC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 3,
+          "alpha": 0.95,
+          "cost_scale": 0.3944190640003234,
+          "delta": 0.9985044160467602,
+          "eta_cvar": 0.03,
+          "gamma": 4.575667963103688,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MPC",
+        "window": 250
+      },
+      "variant": "MPC"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "4dab55030a335a2fd0e81b2ba38446e16e6cdacb3a18c89297d3b3fa97ff9c05",
+      "id": "S2/MV",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "MV"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "f95bac85edf2f59db126dda125d1df7130f0c81a69e506935bc73f215634dcb0",
+      "id": "S2/MV_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 91.97264319689464,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "sample",
+        "shrink": 0.5535202216764371,
+        "strategy_id": "MV_NC",
+        "window": 250
+      },
+      "variant": "MV_NC"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "5a13609f42574bba300867482cb748f06d190743fdb05a5622fbb2017c59c16e",
+      "id": "S2/RANK_LS",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 0.6424435721869107
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "RANK_LS"
+    },
+    {
+      "costs": {},
+      "experiment": "S2",
+      "hash": "46c8bb76ef5b7cf3876ad7a6688f5658fe5d5b4f7c61c5c7f22d4e8ec2bc6911",
+      "id": "S2/ROBUST",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.094502786243415,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.519196998184054,
+          "kappa_rob": 0.9719547474007698,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "ROBUST"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "0f40b8ecbd39c97ba424c8a78ce84a4f73ba203551c686e6906ba80407c68882",
+      "id": "S2b/MV_noisy_0.25",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "noisy_oracle",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 0.3,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "rho": 0.25,
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_noisy_0.25",
+        "window": 250
+      },
+      "variant": "MV_noisy_0.25"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "181887d06e16cdc662bc0ccf4be1402afd91a90c4378f3c7378249945634cc15",
+      "id": "S2b/MV_noisy_0.25_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "noisy_oracle",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 42.6,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "rho": 0.25,
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_noisy_0.25_NC",
+        "window": 250
+      },
+      "variant": "MV_noisy_0.25_NC"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "4980b85470dade5b4c71931783e0d6f4b2de6ad736128b1a35ffd1b35a6eb0b3",
+      "id": "S2b/MV_noisy_0.5",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "noisy_oracle",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 0.3,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "rho": 0.5,
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_noisy_0.5",
+        "window": 250
+      },
+      "variant": "MV_noisy_0.5"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "c5915d2d6215226457d8713922949b18aef37f08d1ae3d236d49592b56c572e9",
+      "id": "S2b/MV_noisy_0.5_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "noisy_oracle",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 42.6,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "rho": 0.5,
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_noisy_0.5_NC",
+        "window": 250
+      },
+      "variant": "MV_noisy_0.5_NC"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "8f30a4f78c836a3512a5140cc9dc558bc5e60d4783b01215bcb88f671997555d",
+      "id": "S2b/MV_noisy_0.75",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "noisy_oracle",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 15.8,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "rho": 0.75,
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_noisy_0.75",
+        "window": 250
+      },
+      "variant": "MV_noisy_0.75"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "a0c938fcae85dc8a40e8fefe7b54f21ca8fad03f120db9dea17adae21950de17",
+      "id": "S2b/MV_noisy_0.75_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "noisy_oracle",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 15.8,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "rho": 0.75,
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_noisy_0.75_NC",
+        "window": 250
+      },
+      "variant": "MV_noisy_0.75_NC"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "8c52d11122d8607c78c3c28d7a8d5b19f0cebd02b7c496d5bdf52b18e768df1c",
+      "id": "S2b/MV_oracle",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "oracle",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 115.0,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_oracle",
+        "window": 250
+      },
+      "variant": "MV_oracle"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "7af80a7ba850356fc8212f5ac0a109ce7b9f07e1fe8b732a20495c4ed30e01d6",
+      "id": "S2b/MV_oracle_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "oracle",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 15.8,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_oracle_NC",
+        "window": 250
+      },
+      "variant": "MV_oracle_NC"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "272af583c4b78669c40b28c031baea838dd3ba233a67603e328230c6f6ff3127",
+      "id": "S2b/MV_plain",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 300.0,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_plain",
+        "window": 250
+      },
+      "variant": "MV_plain"
+    },
+    {
+      "costs": {},
+      "experiment": "S2b",
+      "hash": "66095f0d72817239ce2ca566338f7ec55f381033a3d9a4a81f41f273bb958178",
+      "id": "S2b/MV_plain_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 300.0,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MV_plain_NC",
+        "window": 250
+      },
+      "variant": "MV_plain_NC"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "67164e45b85438fe8df2db25dade7ddf1db04ce72cbdae0e3dd97c1847c7cae2",
+      "id": "S3/book=LO",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "book=LO"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "a4822d3d75e150b8e316fd073563b58a64924820985d860acc7a12530c2b7803",
+      "id": "S3/book=LS_beta",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "beta_band": [
+            -0.05,
+            0.05
+          ],
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "book=LS_beta"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "bfc0849864b4a26f2a58e1a0a0139d7c31d01eda78b20186bc192d88a7ea0aa3",
+      "id": "S3/book=LS_sector",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0,
+          "sector_max": 0.05
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "book=LS_sector"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "f96a1bf06daf764497bde900d107e1c1b554cd20d65d02fa56b1b6101d329199",
+      "id": "S3/cost_scale=0",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "cost_scale=0"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "4b23014ce545b1946b3603914ff62b32a33af9948b55f5c608388d97b446c724",
+      "id": "S3/cost_scale=0.25",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.25,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "cost_scale=0.25"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "9505c8893ba3abbb7eb2c80841929fbf885e64de8468820398fc6c6da9c9b3b3",
+      "id": "S3/cost_scale=0.5",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "cost_scale=0.5"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "fc149703e44363d283f3d8b1d95163191a344384e22c7236dde102c6aaedabe4",
+      "id": "S3/cost_scale=2",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "cost_scale=2"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "cea337fa01289d99f651129ba226885f60605a62a590108eb7624a3f8550f276",
+      "id": "S3/cost_scale=4",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 4.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "cost_scale=4"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "3abcbe2e62a0d2c51478939a25982fa64738d38425560c9599801147c262a031",
+      "id": "S3/parity",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "parity"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "b6c073bc64ddb08077f511acec50300b76ebd38bd51e074cdffbaa94b3eb2409",
+      "id": "S3/rebalance=1",
+      "loop": {
+        "rebalance_every": 1
+      },
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "rebalance=1"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "69a2cbe7601d5a2ab5f72b6a125f818ba97d820d2919b6965294f14abc3b6211",
+      "id": "S3/rebalance=21",
+      "loop": {
+        "rebalance_every": 21
+      },
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "rebalance=21"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "4dab55030a335a2fd0e81b2ba38446e16e6cdacb3a18c89297d3b3fa97ff9c05",
+      "id": "S3/tuned",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "tuned"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "27908881453100f978c6c04073222888b180997da83579e6b74925f32c43fa34",
+      "id": "S3/turnover=0.1",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0,
+          "turnover": 0.1
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "turnover=0.1"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "84bab65fbd4ba41e9d9dc5b2106b4909a5f15e835d0ab5ac84df315144fa436e",
+      "id": "S3/turnover=0.2",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0,
+          "turnover": 0.2
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "turnover=0.2"
+    },
+    {
+      "costs": {},
+      "experiment": "S3",
+      "hash": "98b40b9fa2b44a193b04ae7c1d7a01ce8da17c0882f4dc682a3d4e98428b6bde",
+      "id": "S3/turnover=0.5",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0,
+          "turnover": 0.5
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "turnover=0.5"
+    },
+    {
+      "costs": {},
+      "experiment": "S4",
+      "hash": "ec0353d5ed7d2ae6411946ea700e093aa4fe45f6edcfe0ee025e4d580ca87222",
+      "id": "S4/tiny|2n|ewma",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 4.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_ewma",
+        "window": 16
+      },
+      "variant": "tiny|2n|ewma"
+    },
+    {
+      "costs": {},
+      "experiment": "S4",
+      "hash": "eb862be60327894dda10b0b6ddf9049731e14cbbb1ffe4822fec6584c2863897",
+      "id": "S4/tiny|2n|lw",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 4.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_lw",
+        "window": 16
+      },
+      "variant": "tiny|2n|lw"
+    },
+    {
+      "costs": {},
+      "experiment": "S4",
+      "hash": "d02c66326675435e5c007d39882b847babfcc778a1f5f767c40ec2ad689bfe43",
+      "id": "S4/tiny|2n|pca",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 4.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "pca",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_pca",
+        "window": 16
+      },
+      "variant": "tiny|2n|pca"
+    },
+    {
+      "costs": {},
+      "experiment": "S4",
+      "hash": "effcd888648afe5f7ed68c773a204bf9a02a2299d29341c04101ced18754e1a1",
+      "id": "S4/tiny|2n|sample",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 4.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "sample",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_sample",
+        "window": 16
+      },
+      "variant": "tiny|2n|sample"
+    },
+    {
+      "costs": {},
+      "experiment": "S4",
+      "hash": "262cf16e0bd35894b30c70c836636e0297442471e67a6bae39f06057d38eb4c6",
+      "id": "S4/tiny|n|ewma",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 2.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "ewma",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_ewma",
+        "window": 8
+      },
+      "variant": "tiny|n|ewma"
+    },
+    {
+      "costs": {},
+      "experiment": "S4",
+      "hash": "a9e9d050d52577d5c3a8048492891bde4de7993662326ddb2c4962e4f164460d",
+      "id": "S4/tiny|n|lw",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 2.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_lw",
+        "window": 8
+      },
+      "variant": "tiny|n|lw"
+    },
+    {
+      "costs": {},
+      "experiment": "S4",
+      "hash": "4c6eaef501aafba97202bea74bfaafb5260db0aaa2823a9ddb67e277e095b235",
+      "id": "S4/tiny|n|pca",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 2.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "pca",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_pca",
+        "window": 8
+      },
+      "variant": "tiny|n|pca"
+    },
+    {
+      "costs": {},
+      "experiment": "S4",
+      "hash": "dedf51908679259a125d064a0ad69ee0b2df9cb03f73301a8d466d7d21e35b66",
+      "id": "S4/tiny|n|sample",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 2.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "sample",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_sample",
+        "window": 8
+      },
+      "variant": "tiny|n|sample"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "e905f6d836b8059a177044dc0618a41dfe3600ef9fa2702062db82e773173507",
+      "id": "S5/CASH",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cash",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "CASH",
+        "window": 250
+      },
+      "variant": "CASH"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "c7b04dd556aaa8480045b62a5000823a92a8c8bc1332470f00d814ca89d02d05",
+      "id": "S5/CVAR",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.9,
+          "cost_scale": 2.5361188772753627,
+          "delta": 1.0,
+          "eta_cvar": 0.0003000751615494042,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0961456713280961,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "CVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "c82fd1b93c0c9960ac08bec5b809794d1c89954edfdefc463093f1b0f45f6272",
+      "id": "S5/CVAR_RETUNED",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.9,
+          "cost_scale": 0.6401233864460811,
+          "delta": 1.0,
+          "eta_cvar": 0.0019403410530572191,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.1577196939665189,
+        "strategy_id": "CVAR_RETUNED",
+        "window": 250
+      },
+      "variant": "CVAR_RETUNED"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "9eb35a0d2bdc03392eed3ff57846fec2ae1b2bbf0b23781a88c5a4c488ac25b8",
+      "id": "S5/EW",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "EW"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "6ec2570976361ac5731dac8f6476b4c0ea3be8389d99a07b15258239bc876f12",
+      "id": "S5/MINVAR",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 62.18706061521437,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR",
+        "window": 60
+      },
+      "variant": "MINVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "f679f98a3588569177c86bcda7b1d12d1b7c86e10d7ffadb2d7991eba7db920a",
+      "id": "S5/MINVAR_RETUNED",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 62.18706061521437,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR_RETUNED",
+        "window": 60
+      },
+      "variant": "MINVAR_RETUNED"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "6df86bb9b94326265190412116a66d2b5bed97f2c1a391e8e04d4e2862b93493",
+      "id": "S5/MPC",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 3,
+          "alpha": 0.95,
+          "cost_scale": 0.3944190640003234,
+          "delta": 0.9985044160467602,
+          "eta_cvar": 0.03,
+          "gamma": 4.575667963103688,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MPC",
+        "window": 250
+      },
+      "variant": "MPC"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "27ffb8bf05a8cba4de157c9b6c1e21886a460d5111b3856dccb170fe3d350de2",
+      "id": "S5/MPC_RETUNED",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 3,
+          "alpha": 0.95,
+          "cost_scale": 0.3542913857580241,
+          "delta": 0.9730130739076022,
+          "eta_cvar": 0.03,
+          "gamma": 1.124413541860412,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MPC_RETUNED",
+        "window": 250
+      },
+      "variant": "MPC_RETUNED"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "b0e70f128a503696cfb16197720dd6ae9773c65eb3fb445ee03705e45ce6d869",
+      "id": "S5/MV",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "MV"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "25f4b13010dfe6650825c4defb82e102582e41f764e6dd4727c31ed16b2f2e0a",
+      "id": "S5/MV_NC",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 91.97264319689464,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "sample",
+        "shrink": 0.5535202216764371,
+        "strategy_id": "MV_NC",
+        "window": 250
+      },
+      "variant": "MV_NC"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "493edcd8ab691527032cdf4e05ef9b480af42153a8c0724d44ac345b86b589e5",
+      "id": "S5/MV_NC_RETUNED",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 91.97264319689464,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "sample",
+        "shrink": 0.5535202216764371,
+        "strategy_id": "MV_NC_RETUNED",
+        "window": 250
+      },
+      "variant": "MV_NC_RETUNED"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "9cafdecefc96213842f17c6bd101da5b9138cbe7dc787bf5b0943b6d7b60fecd",
+      "id": "S5/MV_RETUNED",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.044001277596058,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 1.2094309544678798,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.3548547733725018,
+        "strategy_id": "MV_RETUNED",
+        "window": 250
+      },
+      "variant": "MV_RETUNED"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "49f79bede66a952dc1f390ad228f219555f57bc88eb305addc4c408228f3f61c",
+      "id": "S5/RANK_LS",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 0.6424435721869107
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "RANK_LS"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "8f441f44bb506203d132fec4d8d92e9cfa344fb39a807f32518ae4511972af0e",
+      "id": "S5/RANK_LS_RETUNED",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 2.042767475355023
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS_RETUNED",
+        "window": 250
+      },
+      "variant": "RANK_LS_RETUNED"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "86b277df80e0286fb9a10c6b0e5aef5474dec8a63cd75f3e8a82cfc349915a4d",
+      "id": "S5/ROBUST",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.094502786243415,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.519196998184054,
+          "kappa_rob": 0.9719547474007698,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "ROBUST"
+    },
+    {
+      "costs": {},
+      "experiment": "S5",
+      "hash": "e07d52ca7d476f58bd2994ed5c230dcee7acb6ea507b2bf9b2231c1cb6dab337",
+      "id": "S5/ROBUST_RETUNED",
+      "loop": {},
+      "market": "tiny_shift",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.094502786243415,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.519196998184054,
+          "kappa_rob": 0.9719547474007698,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST_RETUNED",
+        "window": 250
+      },
+      "variant": "ROBUST_RETUNED"
+    },
+    {
+      "experiment": "S6",
+      "hash": "4ed0be8ad6233c31b10d0256b40b36521b97238c66c82f2e1f9b9874676e7388",
+      "id": "S6/registry",
+      "variant": "registry"
+    },
+    {
+      "costs": {},
+      "experiment": "S6c",
+      "hash": "758425d82a9d7506259443c3c74ed8e16357b2000e35c9ef94984b741068b127",
+      "id": "S6c/H=1",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 1,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MPC_H1",
+        "window": 250
+      },
+      "variant": "H=1"
+    },
+    {
+      "costs": {},
+      "experiment": "S6c",
+      "hash": "d5a49e04e06558cc3a1668cb7a367024804c0b10488103d8764218e4134222fb",
+      "id": "S6c/H=10",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 10,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MPC_H10",
+        "window": 250
+      },
+      "variant": "H=10"
+    },
+    {
+      "costs": {},
+      "experiment": "S6c",
+      "hash": "cbb5040b94e6370e7afc32f77963e5af5677b8f8a2b0b9f8c18f8f7d6ce58b08",
+      "id": "S6c/H=2",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 2,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MPC_H2",
+        "window": 250
+      },
+      "variant": "H=2"
+    },
+    {
+      "costs": {},
+      "experiment": "S6c",
+      "hash": "7327ef2b3d82ec5369d648a94c43ddb94331caccc0d9861c34d416ca8ed3360d",
+      "id": "S6c/H=5",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MPC_H5",
+        "window": 250
+      },
+      "variant": "H=5"
+    },
+    {
+      "experiment": "S7",
+      "hash": "ec2f19e7b97dfcfb3eae257adc27fdc4bb716cee41a0819e8fecc1024ec8bb6a",
+      "id": "S7/registry",
+      "variant": "registry"
+    },
+    {
+      "costs": {},
+      "experiment": "S8",
+      "hash": "d9dae206b15b5df726b3ff5d9acf2da07e858f8d4666d8df95e43a1c325b48f0",
+      "id": "S8/capital=1e+06",
+      "loop": {
+        "initial_cash": 1000000.0
+      },
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "capital=1e+06"
+    },
+    {
+      "costs": {},
+      "experiment": "S8",
+      "hash": "71d1e1c7d2b2d62faf9a946ee683344e591a9f4b4e73b88bf29edd3323c771b9",
+      "id": "S8/capital=1e+07",
+      "loop": {
+        "initial_cash": 10000000.0
+      },
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "capital=1e+07"
+    },
+    {
+      "costs": {},
+      "experiment": "S8",
+      "hash": "e60909e9b9a196579e1cdf0e637579d024b6672dfbe2de0bdcce0c94d48c11aa",
+      "id": "S8/capital=1e+08",
+      "loop": {
+        "initial_cash": 100000000.0
+      },
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "capital=1e+08"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "e2c7fc723e772f33a812af2d20e1c509c8aefa63b9a502a79c0510b9c9c33a94",
+      "id": "SENS/cost_x0.5|CASH",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cash",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "CASH",
+        "window": 250
+      },
+      "variant": "cost_x0.5|CASH"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "ddecbd1e41e8124ca4ed045edf57fe94d052ad60cfa3ae86daf863dfb915d62c",
+      "id": "SENS/cost_x0.5|CVAR",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.9,
+          "cost_scale": 5.072237754550725,
+          "delta": 1.0,
+          "eta_cvar": 0.0003000751615494042,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0961456713280961,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "cost_x0.5|CVAR"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "c79beddb659c4540e76dcacc1348b493e24942a62eda1bca9d7f2a33fbbb3710",
+      "id": "SENS/cost_x0.5|EW",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "cost_x0.5|EW"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "eb07cd8baa0ef306251f331c0411a62c6436a87e831c8987879e85cabcfcfdf6",
+      "id": "SENS/cost_x0.5|MINVAR",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 62.18706061521437,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR",
+        "window": 60
+      },
+      "variant": "cost_x0.5|MINVAR"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "03cce64a36b684fba0b7efacf02ec9fd98f4952b46ba534b48524d299b8f57da",
+      "id": "SENS/cost_x0.5|MPC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 3,
+          "alpha": 0.95,
+          "cost_scale": 0.7888381280006468,
+          "delta": 0.9985044160467602,
+          "eta_cvar": 0.03,
+          "gamma": 4.575667963103688,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MPC",
+        "window": 250
+      },
+      "variant": "cost_x0.5|MPC"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "b22ad93b5e4003adf2757b649fa6461938a894750111c09546c257da6e79a237",
+      "id": "SENS/cost_x0.5|MV",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 4.306743721397905,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "cost_x0.5|MV"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "82fe50b3017b4b92ba74f5a3322c7a2381d574eb7f2957e5f711ed0ef2a408bb",
+      "id": "SENS/cost_x0.5|MV_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 91.97264319689464,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "sample",
+        "shrink": 0.5535202216764371,
+        "strategy_id": "MV_NC",
+        "window": 250
+      },
+      "variant": "cost_x0.5|MV_NC"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "0aefe5af3f1c2a4c54b7c0f9b92a43ea35a5b878d34824ac7aabb02987d5651c",
+      "id": "SENS/cost_x0.5|RANK_LS",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 0.6424435721869107
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "cost_x0.5|RANK_LS"
+    },
+    {
+      "costs": {
+        "commission_bps": 0.5,
+        "half_spread_bps": 1.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 0.25
+        }
+      },
+      "experiment": "SENS",
+      "hash": "df8b3372c4eee9d6095a7ab994e425533c704c37deb068c4f141dc09cdf737ac",
+      "id": "SENS/cost_x0.5|ROBUST",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 4.18900557248683,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.519196998184054,
+          "kappa_rob": 0.9719547474007698,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "cost_x0.5|ROBUST"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "92c220981a7be7e0ed7bfe9088271d29fe711ad29af9876e7613c2d69f69fc28",
+      "id": "SENS/cost_x2|CASH",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cash",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "CASH",
+        "window": 250
+      },
+      "variant": "cost_x2|CASH"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "cedd19aaddf1e280f2e33933ae4ff521f6f29f960f5a42cc9580b57eeb7a0c74",
+      "id": "SENS/cost_x2|CVAR",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.9,
+          "cost_scale": 1.2680594386376813,
+          "delta": 1.0,
+          "eta_cvar": 0.0003000751615494042,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0961456713280961,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "cost_x2|CVAR"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "8ad0fb34bc0ccb110b9ec41da447dce6260be03b4acd488899e2e19e1f27c8ba",
+      "id": "SENS/cost_x2|EW",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "cost_x2|EW"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "8e65d9e014e1fdc0253f15e5f1d62bee45a2d1ab05e23b4a3d9bc8b36658d146",
+      "id": "SENS/cost_x2|MINVAR",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 62.18706061521437,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR",
+        "window": 60
+      },
+      "variant": "cost_x2|MINVAR"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "684af2f44b5fcffd8bb02ffb7ad12177efdd19ca43576ca3f7d8ca50529a65f8",
+      "id": "SENS/cost_x2|MPC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 3,
+          "alpha": 0.95,
+          "cost_scale": 0.1972095320001617,
+          "delta": 0.9985044160467602,
+          "eta_cvar": 0.03,
+          "gamma": 4.575667963103688,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MPC",
+        "window": 250
+      },
+      "variant": "cost_x2|MPC"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "7f84067ca15a56ce1fc9b240da0bed7ab6d9a93ccbc30af6d0fabddbea0ed72a",
+      "id": "SENS/cost_x2|MV",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0766859303494762,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "cost_x2|MV"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "578029cbad75dff42f1144741d047b4a9704b59c418a2394cb217e32c8f55c54",
+      "id": "SENS/cost_x2|MV_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 91.97264319689464,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "sample",
+        "shrink": 0.5535202216764371,
+        "strategy_id": "MV_NC",
+        "window": 250
+      },
+      "variant": "cost_x2|MV_NC"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "fd8acbcdf13e305b02b20fcc3935c027b354d303e6aa51695d15185fb005d844",
+      "id": "SENS/cost_x2|RANK_LS",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.5,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 0.6424435721869107
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "cost_x2|RANK_LS"
+    },
+    {
+      "costs": {
+        "commission_bps": 2.0,
+        "half_spread_bps": 4.0,
+        "impact": {
+          "model": "sqrt",
+          "y": 1.0
+        }
+      },
+      "experiment": "SENS",
+      "hash": "5892c91ff999356317ccfca86aaca51821086bf63522a9e71806de757ad65f2b",
+      "id": "SENS/cost_x2|ROBUST",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0472513931217076,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.519196998184054,
+          "kappa_rob": 0.9719547474007698,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "cost_x2|ROBUST"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "e5dc303be225b5c6093ba95c3c3f251c8cb33adad193bf4ab16b256903c7b4ab",
+      "id": "SENS/stress|CASH",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cash",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "CASH",
+        "window": 250
+      },
+      "variant": "stress|CASH"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "f7adbb05eeff2167cc0b1d89e6cf4e69b5a1b4e5bf5913570229658cf6e3374d",
+      "id": "SENS/stress|CVAR",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.9,
+          "cost_scale": 2.5361188772753627,
+          "delta": 1.0,
+          "eta_cvar": 0.0003000751615494042,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "cvar",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0961456713280961,
+        "strategy_id": "CVAR",
+        "window": 250
+      },
+      "variant": "stress|CVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "695d7bfa0a623669a938ca8dcbc7c3571d898212c35b62bbf5d82588ed2fa8b9",
+      "id": "SENS/stress|EW",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "equal_weight",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "EW",
+        "window": 250
+      },
+      "variant": "stress|EW"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "95d030a14e615cb21c361b6a29d1d5c46cc68657bdd6435986fc4fbe92820373",
+      "id": "SENS/stress|MINVAR",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "hl": 62.18706061521437,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "min_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MINVAR",
+        "window": 60
+      },
+      "variant": "stress|MINVAR"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "cfb3c0751fd01ab1f73fd3ba38f8108c345883dbde6e5311d3eea3fdc1342f69",
+      "id": "SENS/stress|MPC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 3,
+          "alpha": 0.95,
+          "cost_scale": 0.3944190640003234,
+          "delta": 0.9985044160467602,
+          "eta_cvar": 0.03,
+          "gamma": 4.575667963103688,
+          "kappa_rob": 1.0,
+          "name": "mpc",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "MPC",
+        "window": 250
+      },
+      "variant": "stress|MPC"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "4dab55030a335a2fd0e81b2ba38446e16e6cdacb3a18c89297d3b3fa97ff9c05",
+      "id": "SENS/stress|MV",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.1533718606989525,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 94.51722083224139,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 0.8392553476547719,
+        "strategy_id": "MV",
+        "window": 250
+      },
+      "variant": "stress|MV"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "f95bac85edf2f59db126dda125d1df7130f0c81a69e506935bc73f215634dcb0",
+      "id": "SENS/stress|MV_NC",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 0.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 91.97264319689464,
+          "kappa_rob": 1.0,
+          "name": "mean_variance",
+          "p_rank": 1.0
+        },
+        "risk": "sample",
+        "shrink": 0.5535202216764371,
+        "strategy_id": "MV_NC",
+        "window": 250
+      },
+      "variant": "stress|MV_NC"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "5a13609f42574bba300867482cb748f06d190743fdb05a5622fbb2017c59c16e",
+      "id": "SENS/stress|RANK_LS",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 1.0,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.0,
+          "kappa_rob": 1.0,
+          "name": "rank_ls",
+          "p_rank": 0.6424435721869107
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "RANK_LS",
+        "window": 250
+      },
+      "variant": "stress|RANK_LS"
+    },
+    {
+      "costs": {},
+      "experiment": "SENS",
+      "hash": "46c8bb76ef5b7cf3876ad7a6688f5658fe5d5b4f7c61c5c7f22d4e8ec2bc6911",
+      "id": "SENS/stress|ROBUST",
+      "loop": {},
+      "market": "tiny",
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "hl": 60.0,
+        "min_history": 60,
+        "optimizer": {
+          "H": 5,
+          "alpha": 0.95,
+          "cost_scale": 2.094502786243415,
+          "delta": 1.0,
+          "eta_cvar": 0.03,
+          "gamma": 10.519196998184054,
+          "kappa_rob": 0.9719547474007698,
+          "name": "robust_box",
+          "p_rank": 1.0
+        },
+        "risk": "lw",
+        "shrink": 1.0,
+        "strategy_id": "ROBUST",
+        "window": 250
+      },
+      "variant": "stress|ROBUST"
+    }
+  ],
+  "hashes": [
+    "03cce64a36b684fba0b7efacf02ec9fd98f4952b46ba534b48524d299b8f57da",
+    "0aefe5af3f1c2a4c54b7c0f9b92a43ea35a5b878d34824ac7aabb02987d5651c",
+    "0f40b8ecbd39c97ba424c8a78ce84a4f73ba203551c686e6906ba80407c68882",
+    "181887d06e16cdc662bc0ccf4be1402afd91a90c4378f3c7378249945634cc15",
+    "25f4b13010dfe6650825c4defb82e102582e41f764e6dd4727c31ed16b2f2e0a",
+    "262cf16e0bd35894b30c70c836636e0297442471e67a6bae39f06057d38eb4c6",
+    "272af583c4b78669c40b28c031baea838dd3ba233a67603e328230c6f6ff3127",
+    "27908881453100f978c6c04073222888b180997da83579e6b74925f32c43fa34",
+    "27ffb8bf05a8cba4de157c9b6c1e21886a460d5111b3856dccb170fe3d350de2",
+    "3abcbe2e62a0d2c51478939a25982fa64738d38425560c9599801147c262a031",
+    "46c8bb76ef5b7cf3876ad7a6688f5658fe5d5b4f7c61c5c7f22d4e8ec2bc6911",
+    "493edcd8ab691527032cdf4e05ef9b480af42153a8c0724d44ac345b86b589e5",
+    "4980b85470dade5b4c71931783e0d6f4b2de6ad736128b1a35ffd1b35a6eb0b3",
+    "49f79bede66a952dc1f390ad228f219555f57bc88eb305addc4c408228f3f61c",
+    "4b23014ce545b1946b3603914ff62b32a33af9948b55f5c608388d97b446c724",
+    "4c6eaef501aafba97202bea74bfaafb5260db0aaa2823a9ddb67e277e095b235",
+    "4dab55030a335a2fd0e81b2ba38446e16e6cdacb3a18c89297d3b3fa97ff9c05",
+    "4ed0be8ad6233c31b10d0256b40b36521b97238c66c82f2e1f9b9874676e7388",
+    "578029cbad75dff42f1144741d047b4a9704b59c418a2394cb217e32c8f55c54",
+    "5892c91ff999356317ccfca86aaca51821086bf63522a9e71806de757ad65f2b",
+    "5a13609f42574bba300867482cb748f06d190743fdb05a5622fbb2017c59c16e",
+    "66095f0d72817239ce2ca566338f7ec55f381033a3d9a4a81f41f273bb958178",
+    "67164e45b85438fe8df2db25dade7ddf1db04ce72cbdae0e3dd97c1847c7cae2",
+    "684af2f44b5fcffd8bb02ffb7ad12177efdd19ca43576ca3f7d8ca50529a65f8",
+    "695d7bfa0a623669a938ca8dcbc7c3571d898212c35b62bbf5d82588ed2fa8b9",
+    "69a2cbe7601d5a2ab5f72b6a125f818ba97d820d2919b6965294f14abc3b6211",
+    "6df86bb9b94326265190412116a66d2b5bed97f2c1a391e8e04d4e2862b93493",
+    "6ec2570976361ac5731dac8f6476b4c0ea3be8389d99a07b15258239bc876f12",
+    "71d1e1c7d2b2d62faf9a946ee683344e591a9f4b4e73b88bf29edd3323c771b9",
+    "7327ef2b3d82ec5369d648a94c43ddb94331caccc0d9861c34d416ca8ed3360d",
+    "758425d82a9d7506259443c3c74ed8e16357b2000e35c9ef94984b741068b127",
+    "7af80a7ba850356fc8212f5ac0a109ce7b9f07e1fe8b732a20495c4ed30e01d6",
+    "7f84067ca15a56ce1fc9b240da0bed7ab6d9a93ccbc30af6d0fabddbea0ed72a",
+    "82fe50b3017b4b92ba74f5a3322c7a2381d574eb7f2957e5f711ed0ef2a408bb",
+    "84bab65fbd4ba41e9d9dc5b2106b4909a5f15e835d0ab5ac84df315144fa436e",
+    "86b277df80e0286fb9a10c6b0e5aef5474dec8a63cd75f3e8a82cfc349915a4d",
+    "8ad0fb34bc0ccb110b9ec41da447dce6260be03b4acd488899e2e19e1f27c8ba",
+    "8c52d11122d8607c78c3c28d7a8d5b19f0cebd02b7c496d5bdf52b18e768df1c",
+    "8e65d9e014e1fdc0253f15e5f1d62bee45a2d1ab05e23b4a3d9bc8b36658d146",
+    "8f30a4f78c836a3512a5140cc9dc558bc5e60d4783b01215bcb88f671997555d",
+    "8f441f44bb506203d132fec4d8d92e9cfa344fb39a807f32518ae4511972af0e",
+    "92c220981a7be7e0ed7bfe9088271d29fe711ad29af9876e7613c2d69f69fc28",
+    "9505c8893ba3abbb7eb2c80841929fbf885e64de8468820398fc6c6da9c9b3b3",
+    "95d030a14e615cb21c361b6a29d1d5c46cc68657bdd6435986fc4fbe92820373",
+    "98b40b9fa2b44a193b04ae7c1d7a01ce8da17c0882f4dc682a3d4e98428b6bde",
+    "9bd445d396e4c9b3e0d41a26b45af2505734806edbe0f081c1b7ad19bcea3519",
+    "9cafdecefc96213842f17c6bd101da5b9138cbe7dc787bf5b0943b6d7b60fecd",
+    "9eb35a0d2bdc03392eed3ff57846fec2ae1b2bbf0b23781a88c5a4c488ac25b8",
+    "a0c938fcae85dc8a40e8fefe7b54f21ca8fad03f120db9dea17adae21950de17",
+    "a4822d3d75e150b8e316fd073563b58a64924820985d860acc7a12530c2b7803",
+    "a9e9d050d52577d5c3a8048492891bde4de7993662326ddb2c4962e4f164460d",
+    "b0e70f128a503696cfb16197720dd6ae9773c65eb3fb445ee03705e45ce6d869",
+    "b22ad93b5e4003adf2757b649fa6461938a894750111c09546c257da6e79a237",
+    "b6c073bc64ddb08077f511acec50300b76ebd38bd51e074cdffbaa94b3eb2409",
+    "bfc0849864b4a26f2a58e1a0a0139d7c31d01eda78b20186bc192d88a7ea0aa3",
+    "c5915d2d6215226457d8713922949b18aef37f08d1ae3d236d49592b56c572e9",
+    "c79beddb659c4540e76dcacc1348b493e24942a62eda1bca9d7f2a33fbbb3710",
+    "c7b04dd556aaa8480045b62a5000823a92a8c8bc1332470f00d814ca89d02d05",
+    "c82fd1b93c0c9960ac08bec5b809794d1c89954edfdefc463093f1b0f45f6272",
+    "cbb5040b94e6370e7afc32f77963e5af5677b8f8a2b0b9f8c18f8f7d6ce58b08",
+    "cea337fa01289d99f651129ba226885f60605a62a590108eb7624a3f8550f276",
+    "cedd19aaddf1e280f2e33933ae4ff521f6f29f960f5a42cc9580b57eeb7a0c74",
+    "cfb3c0751fd01ab1f73fd3ba38f8108c345883dbde6e5311d3eea3fdc1342f69",
+    "d02c66326675435e5c007d39882b847babfcc778a1f5f767c40ec2ad689bfe43",
+    "d5a49e04e06558cc3a1668cb7a367024804c0b10488103d8764218e4134222fb",
+    "d9dae206b15b5df726b3ff5d9acf2da07e858f8d4666d8df95e43a1c325b48f0",
+    "ddecbd1e41e8124ca4ed045edf57fe94d052ad60cfa3ae86daf863dfb915d62c",
+    "dedf51908679259a125d064a0ad69ee0b2df9cb03f73301a8d466d7d21e35b66",
+    "df8b3372c4eee9d6095a7ab994e425533c704c37deb068c4f141dc09cdf737ac",
+    "e07d52ca7d476f58bd2994ed5c230dcee7acb6ea507b2bf9b2231c1cb6dab337",
+    "e2c7fc723e772f33a812af2d20e1c509c8aefa63b9a502a79c0510b9c9c33a94",
+    "e5dc303be225b5c6093ba95c3c3f251c8cb33adad193bf4ab16b256903c7b4ab",
+    "e60909e9b9a196579e1cdf0e637579d024b6672dfbe2de0bdcce0c94d48c11aa",
+    "e905f6d836b8059a177044dc0618a41dfe3600ef9fa2702062db82e773173507",
+    "eb07cd8baa0ef306251f331c0411a62c6436a87e831c8987879e85cabcfcfdf6",
+    "eb862be60327894dda10b0b6ddf9049731e14cbbb1ffe4822fec6584c2863897",
+    "ec0353d5ed7d2ae6411946ea700e093aa4fe45f6edcfe0ee025e4d580ca87222",
+    "ec2f19e7b97dfcfb3eae257adc27fdc4bb716cee41a0819e8fecc1024ec8bb6a",
+    "effcd888648afe5f7ed68c773a204bf9a02a2299d29341c04101ced18754e1a1",
+    "f679f98a3588569177c86bcda7b1d12d1b7c86e10d7ffadb2d7991eba7db920a",
+    "f7adbb05eeff2167cc0b1d89e6cf4e69b5a1b4e5bf5913570229658cf6e3374d",
+    "f95bac85edf2f59db126dda125d1df7130f0c81a69e506935bc73f215634dcb0",
+    "f96a1bf06daf764497bde900d107e1c1b554cd20d65d02fa56b1b6101d329199",
+    "fc149703e44363d283f3d8b1d95163191a344384e22c7236dde102c6aaedabe4",
+    "fd8acbcdf13e305b02b20fcc3935c027b354d303e6aa51695d15185fb005d844"
+  ],
+  "n_configurations": 85,
+  "quick": true
+}
