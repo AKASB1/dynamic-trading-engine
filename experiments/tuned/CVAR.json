@@ -1,0 +1,39 @@
+{
+  "mean_ce_ann": 0.004318301450674583,
+  "params": {
+    "optimizer.alpha": 0.975,
+    "optimizer.cost_scale": 3.0614538839765033,
+    "optimizer.eta_cvar": 0.010317051608807325,
+    "shrink": 1.006732217307441
+  },
+  "seeds": [
+    100,
+    101,
+    102,
+    103
+  ],
+  "spec": {
+    "book": "LS",
+    "forecast": "plain",
+    "hl": 60.0,
+    "min_history": 60,
+    "optimizer": {
+      "H": 5,
+      "alpha": 0.975,
+      "cost_scale": 3.0614538839765033,
+      "delta": 1.0,
+      "eta_cvar": 0.010317051608807325,
+      "gamma": 10.0,
+      "kappa_rob": 1.0,
+      "name": "cvar",
+      "p_rank": 1.0
+    },
+    "risk": "lw",
+    "shrink": 1.006732217307441,
+    "strategy_id": "CVAR",
+    "window": 250
+  },
+  "strategy": "CVAR",
+  "trial": 9,
+  "trials": 16
+}

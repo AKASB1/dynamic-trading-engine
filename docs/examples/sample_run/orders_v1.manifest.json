@@ -1,0 +1,20 @@
+{
+  "content_sha256": "b85a4e6ef66a911834e2dca62f3cae3ae5c7a5523fae8950a032ddb6b4f3532c",
+  "generator": {
+    "name": "dte-synthetic",
+    "params": {
+      "delist_hazard_annual": 0.15,
+      "late_listing_share": 0.25,
+      "n_bars": 300,
+      "n_instruments": 8,
+      "name": "tiny",
+      "split_rate_annual": 0.3,
+      "warmup_bars": 100
+    },
+    "version": 1
+  },
+  "qc_version": 1,
+  "row_count": 68,
+  "schema_version": 1,
+  "seed": 1
+}

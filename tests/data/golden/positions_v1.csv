@@ -1,0 +1,3 @@
+ts_event,instrument_id,quantity,mark_price,value
+2024-03-05T21:00:00Z,A,100,102.0,10200.0
+2024-03-06T21:00:00Z,A,100,101.5,10150.0

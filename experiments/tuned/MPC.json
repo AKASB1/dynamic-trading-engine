@@ -1,0 +1,39 @@
+{
+  "mean_ce_ann": 0.006479240426976283,
+  "params": {
+    "optimizer.H": 3,
+    "optimizer.cost_scale": 0.3542913857580241,
+    "optimizer.delta": 0.9730130739076022,
+    "optimizer.gamma": 1.124413541860412
+  },
+  "seeds": [
+    100,
+    101,
+    102,
+    103
+  ],
+  "spec": {
+    "book": "LS",
+    "forecast": "plain",
+    "hl": 60.0,
+    "min_history": 60,
+    "optimizer": {
+      "H": 3,
+      "alpha": 0.95,
+      "cost_scale": 0.3542913857580241,
+      "delta": 0.9730130739076022,
+      "eta_cvar": 0.03,
+      "gamma": 1.124413541860412,
+      "kappa_rob": 1.0,
+      "name": "mpc",
+      "p_rank": 1.0
+    },
+    "risk": "lw",
+    "shrink": 1.0,
+    "strategy_id": "MPC",
+    "window": 250
+  },
+  "strategy": "MPC",
+  "trial": 2,
+  "trials": 16
+}

@@ -1,0 +1,779 @@
+{
+  "S1": {
+    "n_problems": 20,
+    "n_problems_quick": 5,
+    "timing_repetitions": 5,
+    "timing_sizes": [
+      10,
+      30,
+      100
+    ],
+    "timing_sizes_quick": [
+      10,
+      30
+    ]
+  },
+  "S3": {
+    "base": "MV",
+    "beta_band": [
+      -0.05,
+      0.05
+    ],
+    "books": [
+      "LO",
+      "LS",
+      "LS_sector",
+      "LS_beta"
+    ],
+    "cost_scale": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "rebalance_every": [
+      1,
+      5,
+      21
+    ],
+    "sector_max": 0.05,
+    "turnover": [
+      null,
+      0.5,
+      0.2,
+      0.1
+    ]
+  },
+  "S4": {
+    "declared_quantity": "realized out-of-sample annualized volatility of MINVAR (lower is better)",
+    "markets": [
+      "base",
+      "wide"
+    ],
+    "quick_window_rule": [
+      "2n",
+      "n"
+    ],
+    "risk_models": [
+      "sample",
+      "ewma",
+      "lw",
+      "pca"
+    ],
+    "strategy": "MINVAR defaults with the given risk model and window (hl = window / 4 for ewma)",
+    "window_rule": [
+      "250",
+      "2n",
+      "n"
+    ]
+  },
+  "S5": {
+    "at_bar": 630,
+    "quick_at_bar": 200,
+    "retuned": true,
+    "retuned_budget": "16 trials per strategy on shift markets, tuning seeds 100-103, criterion over the bars from at_bar on",
+    "strategies": "S2 frozen"
+  },
+  "S6": {
+    "a": {
+      "H": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        60
+      ],
+      "Lam": [
+        0.1,
+        0.4,
+        1.6
+      ],
+      "g": 0.08,
+      "paths": 200,
+      "phi_gp": [
+        0.05,
+        0.3,
+        0.7
+      ],
+      "quick_paths": 50,
+      "quick_steps": 200,
+      "rho_gp": 0.02,
+      "sigma_eps": 0.01,
+      "steps": 500
+    },
+    "b": {
+      "H": [
+        1,
+        5,
+        20
+      ],
+      "c_prop": [
+        0.0001,
+        0.0004
+      ],
+      "paths": 50,
+      "quick_paths": 4,
+      "quick_steps": 60,
+      "steps": 250
+    },
+    "c": {
+      "H": [
+        1,
+        2,
+        5,
+        10
+      ],
+      "base": "MV",
+      "delta": 1.0
+    }
+  },
+  "S7": {
+    "K": 13,
+    "S0": 50.0,
+    "T_bars": 1.0,
+    "a": {
+      "Q_frac_adv": 0.05,
+      "eta_ac": 2.5e-06,
+      "gamma_ac": 2.5e-07,
+      "lambda_grid": [
+        1e-08,
+        1e-07,
+        1e-06,
+        3e-06,
+        1e-05,
+        3e-05,
+        0.0001
+      ],
+      "pov_rate": 0.1
+    },
+    "adv": 1000000.0,
+    "b": {
+      "Q_frac_adv": [
+        0.005,
+        0.02,
+        0.1
+      ],
+      "ac_lambda": 1e-06,
+      "participation_cap": 0.1,
+      "pov_rate": 0.1,
+      "volume_noise_sd": 0.3
+    },
+    "c": {
+      "Q_frac_adv": 0.02,
+      "latency": [
+        0,
+        1,
+        2
+      ],
+      "participation_cap": [
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "declared_quantity": "mean shortfall in bps of Q*S0 and its sd across paths; E + lambda V on the frontier",
+    "paths": 2000,
+    "quick_paths": 200,
+    "sigma_bar": 0.02
+  },
+  "S8": {
+    "K": 13,
+    "base": "MV",
+    "capital": [
+      1000000.0,
+      10000000.0,
+      100000000.0
+    ],
+    "note": "post-hoc re-costing of the tuned MV's parent orders in the execution simulator over the fill bar; does not feed back into the loop",
+    "paths_per_order": 20,
+    "policies": [
+      "market",
+      "twap",
+      "vwap"
+    ],
+    "volume_noise_sd": 0.3
+  },
+  "SENS": {
+    "cost_mult": [
+      0.5,
+      2.0
+    ],
+    "gamma_ce": [
+      3.0,
+      6.0,
+      12.0
+    ],
+    "stress_market": "stress"
+  },
+  "baselines": [
+    "CASH",
+    "EW",
+    "RANK_LS"
+  ],
+  "costs": {},
+  "criterion": {
+    "definition": "ppy * (mean(r) - gamma_ce / 2 * var(r, ddof=1)) of the net per-bar returns after the first decision",
+    "gamma_ce": 6.0,
+    "name": "ce_ann"
+  },
+  "defaults": {
+    "optimizer": {
+      "H": 5,
+      "alpha": 0.95,
+      "cost_scale": 1.0,
+      "delta": 1.0,
+      "eta_cvar": 0.03,
+      "gamma": 10.0,
+      "kappa_rob": 1.0,
+      "p_rank": 1.0
+    },
+    "spec": {
+      "book": "LS",
+      "forecast": "plain",
+      "hl": 60.0,
+      "min_history": 60,
+      "risk": "lw",
+      "shrink": 1.0,
+      "window": 250
+    }
+  },
+  "highlight_rule": "Among the registered non-oracle strategies of S2, the one with the highest mean ce_ann is named; it is called better than a reference (CASH, EW, RANK_LS) only if the 95 percent paired interval of its ce_ann against that reference excludes zero (against CASH: its own ce_ann interval excludes zero); otherwise the README says that no strategy separated from that reference. Exact ties are called ties. The share of bars without any position (flat_frac) is reported next to every strategy.",
+  "ladder": {
+    "base": "MV",
+    "budget": "8 gamma values per rung on the tuning seeds (its own declared budget, not 16 trials)",
+    "cost_ignorant": true,
+    "gamma_grid": [
+      0.3,
+      0.808,
+      2.18,
+      5.87,
+      15.8,
+      42.6,
+      115.0,
+      300.0
+    ],
+    "rungs": [
+      {
+        "forecast": "plain",
+        "id": "plain"
+      },
+      {
+        "forecast": "noisy_oracle",
+        "id": "noisy_0.25",
+        "rho": 0.25
+      },
+      {
+        "forecast": "noisy_oracle",
+        "id": "noisy_0.5",
+        "rho": 0.5
+      },
+      {
+        "forecast": "noisy_oracle",
+        "id": "noisy_0.75",
+        "rho": 0.75
+      },
+      {
+        "forecast": "oracle",
+        "id": "oracle"
+      }
+    ],
+    "shrink": 1.0
+  },
+  "loop": {
+    "initial_cash": 10000000.0,
+    "rebalance_every": 5
+  },
+  "markets": {
+    "main": "base",
+    "quick_main": "tiny",
+    "quick_shift": "tiny_shift",
+    "shift": "shift",
+    "stress": "stress",
+    "wide": "wide"
+  },
+  "s2_order": [
+    "CASH",
+    "EW",
+    "MINVAR",
+    "RANK_LS",
+    "MV",
+    "MV_NC",
+    "CVAR",
+    "ROBUST",
+    "MPC"
+  ],
+  "s2_registered": [
+    "EW",
+    "MINVAR",
+    "RANK_LS",
+    "MV",
+    "MV_NC",
+    "CVAR",
+    "ROBUST",
+    "MPC"
+  ],
+  "schema_version": 1,
+  "seeds": {
+    "S2": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020,
+      1021,
+      1022,
+      1023,
+      1024,
+      1025,
+      1026,
+      1027,
+      1028,
+      1029
+    ],
+    "S3": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "S4": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "S5": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020,
+      1021,
+      1022,
+      1023,
+      1024,
+      1025,
+      1026,
+      1027,
+      1028,
+      1029
+    ],
+    "S6": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "S6b": [
+      1000
+    ],
+    "S7": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019
+    ],
+    "S8": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009
+    ],
+    "SENS": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020,
+      1021,
+      1022,
+      1023,
+      1024,
+      1025,
+      1026,
+      1027,
+      1028,
+      1029
+    ],
+    "dev_quick": [
+      1,
+      2,
+      3
+    ],
+    "tuning": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "tuning_quick": [
+      100,
+      101
+    ]
+  },
+  "strategies": {
+    "CASH": {
+      "role": "reference: no positions (ce_ann exactly 0)",
+      "space": {},
+      "spec": {
+        "book": "LS",
+        "forecast": "none",
+        "optimizer": {
+          "name": "cash"
+        }
+      }
+    },
+    "CVAR": {
+      "space": {
+        "optimizer.alpha": [
+          "choice",
+          [
+            0.9,
+            0.95,
+            0.975
+          ]
+        ],
+        "optimizer.cost_scale": [
+          "log",
+          0.25,
+          4.0
+        ],
+        "optimizer.eta_cvar": [
+          "log",
+          0.0003,
+          0.03
+        ],
+        "shrink": [
+          "uniform",
+          0.25,
+          1.5
+        ]
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "optimizer": {
+          "name": "cvar"
+        }
+      }
+    },
+    "EW": {
+      "role": "market baseline",
+      "space": {},
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "optimizer": {
+          "name": "equal_weight"
+        }
+      }
+    },
+    "MINVAR": {
+      "space": {
+        "hl": [
+          "log",
+          20,
+          250
+        ],
+        "risk": [
+          "choice",
+          [
+            "sample",
+            "ewma",
+            "lw",
+            "pca"
+          ]
+        ],
+        "window": [
+          "int_log",
+          60,
+          500
+        ]
+      },
+      "spec": {
+        "book": "LO",
+        "forecast": "none",
+        "optimizer": {
+          "name": "min_variance"
+        }
+      }
+    },
+    "MPC": {
+      "space": {
+        "optimizer.H": [
+          "choice",
+          [
+            2,
+            3,
+            5,
+            10
+          ]
+        ],
+        "optimizer.cost_scale": [
+          "log",
+          0.25,
+          4.0
+        ],
+        "optimizer.delta": [
+          "uniform",
+          0.8,
+          1.0
+        ],
+        "optimizer.gamma": [
+          "log",
+          0.3,
+          300.0
+        ]
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "optimizer": {
+          "name": "mpc"
+        }
+      }
+    },
+    "MV": {
+      "space": {
+        "optimizer.cost_scale": [
+          "log",
+          0.25,
+          4.0
+        ],
+        "optimizer.gamma": [
+          "log",
+          0.3,
+          300.0
+        ],
+        "risk": [
+          "choice",
+          [
+            "sample",
+            "ewma",
+            "lw"
+          ]
+        ],
+        "shrink": [
+          "uniform",
+          0.25,
+          1.5
+        ]
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "optimizer": {
+          "name": "mean_variance"
+        }
+      }
+    },
+    "MV_NC": {
+      "role": "cost-ignorant control",
+      "space": {
+        "optimizer.gamma": [
+          "log",
+          0.3,
+          300.0
+        ],
+        "risk": [
+          "choice",
+          [
+            "sample",
+            "ewma",
+            "lw"
+          ]
+        ],
+        "shrink": [
+          "uniform",
+          0.25,
+          1.5
+        ]
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "optimizer": {
+          "cost_scale": 0.0,
+          "name": "mean_variance"
+        }
+      }
+    },
+    "RANK_LS": {
+      "role": "naive signal-weighted baseline",
+      "space": {
+        "optimizer.p_rank": [
+          "log",
+          0.25,
+          4.0
+        ]
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "optimizer": {
+          "name": "rank_ls"
+        }
+      }
+    },
+    "ROBUST": {
+      "space": {
+        "optimizer.cost_scale": [
+          "log",
+          0.25,
+          4.0
+        ],
+        "optimizer.gamma": [
+          "log",
+          0.3,
+          300.0
+        ],
+        "optimizer.kappa_rob": [
+          "uniform",
+          0.0,
+          1.0
+        ],
+        "risk": [
+          "choice",
+          [
+            "sample",
+            "ewma",
+            "lw"
+          ]
+        ]
+      },
+      "spec": {
+        "book": "LS",
+        "forecast": "plain",
+        "optimizer": {
+          "name": "robust_box"
+        }
+      }
+    }
+  },
+  "tuning": {
+    "search_stream": "tune.<strategy>, seed = trial index",
+    "trials": 16,
+    "trials_quick": 4
+  }
+}

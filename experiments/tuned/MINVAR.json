@@ -1,0 +1,38 @@
+{
+  "mean_ce_ann": -0.04845133860738927,
+  "params": {
+    "hl": 68.10129939688258,
+    "risk": "pca",
+    "window": 257
+  },
+  "seeds": [
+    100,
+    101,
+    102,
+    103
+  ],
+  "spec": {
+    "book": "LO",
+    "forecast": "none",
+    "hl": 68.10129939688258,
+    "min_history": 60,
+    "optimizer": {
+      "H": 5,
+      "alpha": 0.95,
+      "cost_scale": 1.0,
+      "delta": 1.0,
+      "eta_cvar": 0.03,
+      "gamma": 10.0,
+      "kappa_rob": 1.0,
+      "name": "min_variance",
+      "p_rank": 1.0
+    },
+    "risk": "pca",
+    "shrink": 1.0,
+    "strategy_id": "MINVAR",
+    "window": 257
+  },
+  "strategy": "MINVAR",
+  "trial": 8,
+  "trials": 16
+}

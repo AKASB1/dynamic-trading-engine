@@ -1,0 +1,10 @@
+{
+  "delist_hazard_annual": 0.15,
+  "late_listing_share": 0.25,
+  "n_bars": 300,
+  "n_instruments": 8,
+  "name": "tiny_shift",
+  "shift": {"at_bar": 200, "corr_mult": 1.5, "ic_mult": 0.5, "mu_shift_annual": -0.05, "vol_mult": 1.5},
+  "split_rate_annual": 0.3,
+  "warmup_bars": 100
+}

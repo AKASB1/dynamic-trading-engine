@@ -1,0 +1,4 @@
+{
+  "name": "shift",
+  "shift": {"at_bar": 630, "corr_mult": 1.5, "ic_mult": 0.5, "mu_shift_annual": -0.05, "vol_mult": 1.5}
+}

@@ -21,3 +21,12 @@ logs/
 .DS_Store
 .idea/
 .vscode/
+
+# Private planning notes
+*.local.md
+
+# Agent tooling
+.claude/
+
+# Experiment outputs (per-run logs, equity curves; not committed)
+experiments/outputs/

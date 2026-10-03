@@ -1,0 +1,36 @@
+{
+  "mean_ce_ann": -0.0021240580937566898,
+  "params": {
+    "optimizer.gamma": 91.97264319689464,
+    "risk": "sample",
+    "shrink": 0.5535202216764371
+  },
+  "seeds": [
+    100,
+    101
+  ],
+  "spec": {
+    "book": "LS",
+    "forecast": "plain",
+    "hl": 60.0,
+    "min_history": 60,
+    "optimizer": {
+      "H": 5,
+      "alpha": 0.95,
+      "cost_scale": 0.0,
+      "delta": 1.0,
+      "eta_cvar": 0.03,
+      "gamma": 91.97264319689464,
+      "kappa_rob": 1.0,
+      "name": "mean_variance",
+      "p_rank": 1.0
+    },
+    "risk": "sample",
+    "shrink": 0.5535202216764371,
+    "strategy_id": "MV_NC",
+    "window": 250
+  },
+  "strategy": "MV_NC",
+  "trial": 1,
+  "trials": 4
+}

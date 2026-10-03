@@ -1,0 +1,36 @@
+{
+  "mean_ce_ann": -0.13557142710215023,
+  "params": {
+    "optimizer.p_rank": 2.324329637942033
+  },
+  "seeds": [
+    100,
+    101,
+    102,
+    103
+  ],
+  "spec": {
+    "book": "LS",
+    "forecast": "plain",
+    "hl": 60.0,
+    "min_history": 60,
+    "optimizer": {
+      "H": 5,
+      "alpha": 0.95,
+      "cost_scale": 1.0,
+      "delta": 1.0,
+      "eta_cvar": 0.03,
+      "gamma": 10.0,
+      "kappa_rob": 1.0,
+      "name": "rank_ls",
+      "p_rank": 2.324329637942033
+    },
+    "risk": "lw",
+    "shrink": 1.0,
+    "strategy_id": "RANK_LS",
+    "window": 250
+  },
+  "strategy": "RANK_LS",
+  "trial": 13,
+  "trials": 16
+}
