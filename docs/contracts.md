@@ -39,7 +39,7 @@ The golden fixtures of the contract live in `tests/data/golden/` and pass these 
 - **Point-in-time adjustment.** The split-adjusted close as of `t` divides the raw closes before a split's ex-bar by its ratio, only for splits with `ts_ex <= t`. The total-return series as of `t` is the cumulative product of the returns known at `t`, scaled so that its last value equals the last split-adjusted close.
 - **Universe at `t`.** Every instrument with `ts_list <= t` and (`ts_delist` empty or `ts_delist > t`), including those that delist later.
 - **Decision.** A function of rows known at `t` and of the engine's state after all fills up to `t`; orders are submitted at `t`; a decision never sees a fill of an order submitted at the same instant.
-- **Fills.** An order submitted at the end of bar `k` fills at the earliest in bar `k + 1` of its instrument, at the reference price `m` = the open of that bar (`next_open`, the default for `equity_daily`). A market order fills in full unless the participation cap binds (filled quantity at most `participation_cap * volume` of the fill bar; the rest of a `day` order is cancelled). Nothing fills in a zero-volume bar. Quantities are rounded toward zero to `lot_size`. A same-bar fill model does not exist in this repository.
+- **Fills.** An order submitted at the end of bar `k` fills at the earliest in bar `k + 1` of its instrument, at the reference price `m` = the open of that bar (`next_open`, the default for `equity_daily`). A market order fills in full unless the participation cap binds (filled quantity at most `participation_cap * volume` of the fill bar; the rest of a `day` order is canceled). Nothing fills in a zero-volume bar. Quantities are rounded toward zero to `lot_size`. A same-bar fill model does not exist in this repository.
 - **Shorts and leverage.** Shorts only where the book allows them. Gross leverage = gross position value / equity. Orders that would take the gross exposure, at the fill's reference prices, above `max_leverage` by more than `1e-6` are scaled down proportionally and logged (here: to `max(max_leverage, gross before the orders)`).
 - **Order of events in a bar.** (1) splits rescale the opening quantity (`q * ratio`), the previous close (`P_prev / ratio`), and pending orders (`* ratio`); (2) dividends on the opening quantity before the split, credited at the close; (3) fills; (4) in the last bar of a delisting instrument, any position is closed at `close * (1 + delist_return)` (`DELIST`, no costs); (5) accruals; (6) mark to the close.
 
@@ -53,7 +53,7 @@ Defaults: `commission_bps` 1.0, `commission_per_share` 0.0, `min_commission` 0.0
 - `commission = max(min_commission, |q| m commission_bps / 1e4 + |q| commission_per_share)`
 - accruals at each bar's close over `dt` days: `borrow = sum_short |q| P_prev borrow_bps / 1e4 dt / 365`; `financing = max(0, -cash_prev) financing_bps / 1e4 dt / 365`; interest income `max(0, cash_prev) cash_rate_bps / 1e4 dt / 365`.
 - Impact never reads the fill bar's volume or range; the participation cap does (it is a physical limit, not a cost).
-- **Convex form for the optimizer**, for a trade `z_i` in units of equity `E`: `c(z) = sum_i a_i |z_i| + b_i |z_i|^1.5` with `a_i = (half_spread_bps + commission_bps) / 1e4 + commission_per_share / P_i` and `b_i = y sigma_i sqrt(E / (V_i P_i))`; `min_commission` and lots are not modelled. With noise off, no cap, `min_commission` 0, and no lots, `E * c(z)` equals the loop's charged cost and the execution simulator's single-interval cost (the three-way parity test).
+- **Convex form for the optimizer**, for a trade `z_i` in units of equity `E`: `c(z) = sum_i a_i |z_i| + b_i |z_i|^1.5` with `a_i = (half_spread_bps + commission_bps) / 1e4 + commission_per_share / P_i` and `b_i = y sigma_i sqrt(E / (V_i P_i))`; `min_commission` and lots are not modeled. With noise off, no cap, `min_commission` 0, and no lots, `E * c(z)` equals the loop's charged cost and the execution simulator's single-interval cost (the three-way parity test).
 
 ## 5. Accounting
 
@@ -75,7 +75,7 @@ The **declared criterion** of this project (its own, not part of the contract): 
 
 ## 8. Wording
 
-Every result is "simulated", states its data (synthetic, generator configuration and seed), cost model, schedule, tuning, number of trials, and number of seeds, and is phrased "in this simulation, under these assumptions". No claim of profitability, alpha, or real performance. An oracle result is a bound and is labelled `ORACLE`.
+Every result is "simulated", states its data (synthetic, generator configuration and seed), cost model, schedule, tuning, number of trials, and number of seeds, and is phrased "in this simulation, under these assumptions". No claim of profitability, alpha, or real performance. An oracle result is a bound and is labeled `ORACLE`.
 
 ## Extensions of this project
 
@@ -89,6 +89,6 @@ Every result is "simulated", states its data (synthetic, generator configuration
 - Deflated Sharpe ratio in the main comparison: the registered trials are the eight strategies of the table on each seed (`N` = 8), not every configuration evaluated during tuning, because the tuning trials ran on disjoint tuning seeds.
 - Leverage rule detail: when the gross exposure before the orders already exceeds `max_leverage` (an overnight move), the orders are scaled so that the gross does not exceed the gross before the orders.
 
-## Export consumer (Tier 2)
+## Export consumer
 
 `market/export.py` reads an export directory of the contract's export format (version 1): `manifest.json` and `instruments.csv`, `bars.csv`, `corporate_actions.csv`, `returns.csv`, `signals.csv`, `forecasts.csv`, `liquidity.csv` (each with its own manifest; `series.csv` optional). Every listed file is checked against the hash in `manifest.json` and in its own manifest, loaded with the schema's loader, and checked for the knowledge rule (no row available before its event); a `derived_only` export must carry header-only bars. `signals.csv` rows named `signal_x` become the `signal_x` series; `forecasts.csv` (horizon 1) feeds the `export` forecast provider (the latest forecast available at the decision instant). `write_export` writes such a directory from a market of this repository; a loop run on the export equals the run on the in-memory market (tested), and a tampered file is refused.

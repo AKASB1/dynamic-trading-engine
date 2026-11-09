@@ -6,12 +6,12 @@ Every number below is an assumed value of this simulation, not an estimate from 
 
 | Name | What differs from `base` | Used by |
 |---|---|---|
-| `base` | 30 instruments, 1260 bars on `equity_daily` from 2018-01-02, `ppy` 252, warmup 260 | tuning, S2, S2b, S3, S4, S6(c), S8, SENS; Tier 2: `WDRO`, `GP_AIM`, cost misspecification, capacity |
+| `base` | 30 instruments, 1260 bars on `equity_daily` from 2018-01-02, `ppy` 252, warmup 260 | tuning, S2, S2b, S3, S4, S6(c), S8, SENS; later studies: `WDRO`, `GP_AIM`, cost misspecification, capacity |
 | `tiny` | 8 instruments, 300 bars, warmup 100, higher event rates (delisting hazard 0.15 per year, split rate 0.3 per year, a quarter of the instruments list late) so that small runs see events | tests, quick mode, the audit |
 | `tiny_shift` | `tiny` with the shift of `shift` at bar 200 | quick S5 |
 | `wide` | 100 instruments, 1000 bars | S4 |
 | `null` | `ic` = 0 | forecast tests |
-| `shift` | a distribution shift at bar 630: `vol_mult` 1.5, `corr_mult` 1.5, `ic_mult` 0.5, `mu_shift_annual` -0.05 | S5; Tier 2: `WDRO` |
+| `shift` | a distribution shift at bar 630: `vol_mult` 1.5, `corr_mult` 1.5, `ic_mult` 0.5, `mu_shift_annual` -0.05 | S5; later studies: `WDRO` |
 | `clean` | no factors, equal idiosyncratic volatility, regime off, no events, no premium | fundamental-law test |
 | `stress` | calm-to-stress transition probability 0.03 per bar (stationary stress share 0.375 instead of 0.167) | SENS |
 
@@ -47,6 +47,6 @@ From bar `at_bar` on: all volatilities times `vol_mult`; each instrument's facto
 
 The `base` market; the contract's cost model with its defaults (commission 1 bp, half spread 2 bp, square-root impact with `y` 0.5, borrow 50 bp a year, financing 100 bp a year, no interest on cash, participation cap 0.1); `next_open` fills; the `LS` book; `rebalance_every` 5; `warmup_bars` 260; initial capital 10 million in the quote currency; `ppy` 252.
 
-## Tier 2: fat tails and jumps (assumed tail models)
+## Fat tails and jumps (assumed tail models)
 
 `tails: student_t` replaces the Gaussian factor and idiosyncratic draws by unit-variance Student-t draws with `t_dof` = 5 degrees of freedom (`Z sqrt((nu - 2) / W)`, `W` chi-squared from the streams `market.tails.*`); `jump_rate_annual` > 0 adds zero-mean idiosyncratic jumps (Bernoulli per bar and instrument at the annual rate divided by `ppy`, size normal with standard deviation `jump_size` = 4 times the bar's idiosyncratic standard deviation; stream `market.jumps`). The truth's covariance does not include the jumps. Configurations: `base_t5`, `shift_t5`, `base_jump`, `shift_jump` (5 jumps per instrument and year). The Gaussian draws are unchanged, so the default markets are identical to before (tested through the recorded hashes of the quick results).

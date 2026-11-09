@@ -10,10 +10,9 @@
   },
   "gurobi": false,
   "hardware": {
-    "cpu": "Intel(R) Core(TM) i9-14900KF",
+    "cpu": "x86-64 desktop CPU",
     "logical_cpus": 32,
-    "os": "Windows 11",
-    "ram_gb": 102.9
+    "os": "Windows 11"
   },
   "numpy": "2.5.3",
   "package_version": "0.2.0",

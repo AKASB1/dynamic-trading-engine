@@ -8,7 +8,7 @@ The two projects share a written contract (file formats, knowledge-time rules, t
 
 ## Portfolio optimizer
 
-A family of convex problems built once with CVXPY parameters (DPP) and re-solved: `equal_weight`, `rank_ls` (naive baseline), `min_variance`, `mean_variance`, `cvar` (Rockafellar-Uryasev inside the problem), `robust_box` and `robust_ell` (worst case over a box or an ellipsoid around the forecast), the controller `mpc`, and two Tier-2 strategies: `wdro` (mean-CVaR in the worst case over a Wasserstein ball around the scenarios) and `gp_aim` (the multi-asset Garleanu-Pedersen trading rule, projected onto the book). Per holding period of `k` bars:
+A family of convex problems built once with CVXPY parameters (DPP) and re-solved: `equal_weight`, `rank_ls` (naive baseline), `min_variance`, `mean_variance`, `cvar` (Rockafellar-Uryasev inside the problem), `robust_box` and `robust_ell` (worst case over a box or an ellipsoid around the forecast), the controller `mpc`, and two strategies of the later studies: `wdro` (mean-CVaR in the worst case over a Wasserstein ball around the scenarios) and `gp_aim` (the multi-asset Garleanu-Pedersen trading rule, projected onto the book). Per holding period of `k` bars:
 
 ```text
 maximize    mu_h' w - (gamma/2) w' (k Sigma) w - cost_scale * c(w - w0)      (mean_variance)
@@ -29,7 +29,7 @@ One parent order over `K` intervals: arithmetic mid-price walk with optional per
 
 ## Policy interface
 
-Two kinds of policies. Portfolio strategies map a `DecisionState` (the knowledge-bounded view at the decision instant) to target weights (`engine/types.py`: `decide(state) -> Decision`); the built-in one composes a forecast provider, a risk model, an optimizer or the controller, and a book. Execution policies map the state known at the start of an interval (index, remaining quantity, earlier prices and volumes, the expected profile) to a desired quantity or a participation rate. An adaptive execution policy (`execution/adaptive.py`, Tier 2) re-plans the Almgren-Chriss schedule of the remaining quantity at every interval, with the expected profile rescaled by the volume observed so far.
+Two kinds of policies. Portfolio strategies map a `DecisionState` (the knowledge-bounded view at the decision instant) to target weights (`engine/types.py`: `decide(state) -> Decision`); the built-in one composes a forecast provider, a risk model, an optimizer or the controller, and a book. Execution policies map the state known at the start of an interval (index, remaining quantity, earlier prices and volumes, the expected profile) to a desired quantity or a participation rate. An adaptive execution policy (`execution/adaptive.py`, a later study) re-plans the Almgren-Chriss schedule of the remaining quantity at every interval, with the expected profile rescaled by the volume observed so far.
 
 ## Delivery order
 
@@ -43,10 +43,10 @@ Two kinds of policies. Portfolio strategies map a `DecisionState` (the knowledge
 - [x] execution simulator, baseline policies, Almgren-Chriss reference (R8)
 - [x] information audit with canaries
 - [x] protocol: registry, equal-budget tuning, frozen configurations, experiments S1-S8 and SENS
-- [x] Wasserstein distributionally robust mean-CVaR (Tier 2)
-- [x] multi-asset Garleanu-Pedersen rule (Tier 2)
-- [x] adaptive execution policy (Tier 2)
-- [x] solver comparison, fat tails and jumps, cost misspecification, capacity, export consumer (Tier 2)
+- [x] Wasserstein distributionally robust mean-CVaR (later study)
+- [x] multi-asset Garleanu-Pedersen rule (later study)
+- [x] adaptive execution policy (later study)
+- [x] solver comparison, fat tails and jumps, cost misspecification, capacity, export consumer (later study)
 - [ ] consuming an export of the research engine (none was available)
 - the paper-trading adapter of the original plan is out of scope (no credentials, no broker connectivity)
 
@@ -64,4 +64,4 @@ This repository follows quant-contracts version 1 as restated in `docs/contracts
 
 ## Checkpoint
 
-Built and tested: everything in the delivery-order list marked done, with one protocol tuning run and one full evaluation (Tier 1) and one run of every Tier-2 study. Not done: the item marked open, a run of the GitHub workflow (the tests and README commands ran once on Linux in an independent check; two platform-dependent test failures found there are fixed but were not re-run on Linux), the audit of the Tier-2 strategies, limit orders. See the README's `## TODO`.
+Built and tested: everything in the delivery-order list marked done, with one protocol tuning run, one full evaluation, and one run of every later study. The GitHub workflow passed on `main` on 2026-10-03. Not done: the item marked open, the audit of the strategies of the later studies, limit orders ([limitations](simulations/README.md#limitations)).

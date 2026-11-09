@@ -1,24 +1,24 @@
 # Architecture
 
-![framework](figures/framework.png)
+![Architecture: market, DecisionState, the forecast-risk-optimizer pipeline, the rolling loop, validator, evaluation, and execution simulator](figures/architecture.svg)
 
 ## Modules (`src/dynamic_trading_engine/`)
 
 | Package | Role | Sees the truth? |
 |---|---|---|
 | `contracts/` | the contract's schemas (loaders, validators, writers), timestamps, canonical JSON and configuration hashes, manifests, the cost model | no |
-| `market/` | configuration, calendar, generator (`generator.py`, returns the market and the `Truth`), `truth.py`, liquidity function, contract-file store, registry of the current market directory, the consumer of the contract's export format (`export.py`, Tier 2) | only `generator.py` and `truth.py` |
+| `market/` | configuration, calendar, generator (`generator.py`, returns the market and the `Truth`), `truth.py`, liquidity function, contract-file store, registry of the current market directory, the consumer of the contract's export format (`export.py`, a later study) | only `generator.py` and `truth.py` |
 | `state/` | the knowledge-bounded view and the `DecisionState` | no |
-| `forecasts/` | `none`, `plain` (`simple.py`); the oracle providers in `oracle.py` (labelled bounds) | only `oracle.py` |
+| `forecasts/` | `none`, `plain` (`simple.py`); the oracle providers in `oracle.py` (labeled bounds) | only `oracle.py` |
 | `risk/` | `sample`, `ewma`, `lw`, `pca`, eigenvalue floor | no |
-| `optimization/` | cached DPP problems (`problems.py`), the optimizer family and the failure rule (`optimizers.py`), random test problems (`testing.py`), the Wasserstein-robust mean-CVaR problem and the Tier-2 solve paths (`wdro.py`, `tier2.py`) | no |
-| `policies/` | multi-period references: Garleanu-Pedersen closed form, grid dynamic programs, single-asset controllers; the multi-asset Garleanu-Pedersen rule (`gp_aim.py`, Tier 2) | no |
-| `execution/` | the execution simulator, its policies, the Almgren-Chriss reference, the adaptive Almgren-Chriss policy (`adaptive.py`, Tier 2) | no |
+| `optimization/` | cached DPP problems (`problems.py`), the optimizer family and the failure rule (`optimizers.py`), random test problems (`testing.py`), the Wasserstein-robust mean-CVaR problem and the solve paths of the later studies (`wdro.py`, `tier2.py`) | no |
+| `policies/` | multi-period references: Garleanu-Pedersen closed form, grid dynamic programs, single-asset controllers; the multi-asset Garleanu-Pedersen rule (`gp_aim.py`, a later study) | no |
+| `execution/` | the execution simulator, its policies, the Almgren-Chriss reference, the adaptive Almgren-Chriss policy (`adaptive.py`, a later study) | no |
 | `engine/` | the rolling loop, the logs, the independent validator, the strategy interface | no |
 | `strategies/` | the built-in pipeline strategy (`pipeline.py`), scripted test strategies, the factory that builds a strategy from a spec and hands oracles the truth (`factory.py`) | only `factory.py` |
 | `analytics/` | metrics of the contract, the criterion, summary statistics | no |
 | `audit/` | poisoned worlds, replay with a module purge, garbage truth, label audit, the audit table | yes |
-| `experiments/` | registry, tuner and guards, freeze, runner, experiments S1-S8 and SENS, the Tier-2 studies (`tier2.py`, `tier2_more.py`, `solvers.py`), tables, report, benchmarks | yes |
+| `experiments/` | registry, tuner and guards, freeze, runner, experiments S1-S8 and SENS, the later studies (`tier2.py`, `tier2_more.py`, `solvers.py`), tables, report, benchmarks | yes |
 | `cli/` | command-line entry points | yes |
 
 A static test reads the import graph and enforces the right-hand column.
@@ -36,7 +36,7 @@ Every row of the contract's datasets carries `ts_avail`; a row is known at `t` i
 
 ## The loop (per bar, in the contract's order)
 
-1. Splits effective in the bar rescale the opening quantity, the previous close, and pending orders; 2. dividends on the opening quantity before the split, credited at the close; 3. fills of the orders submitted at the previous decision at the bar's open (participation cap from the bar's volume, the rest cancelled; nothing fills without a bar or in a zero-volume bar; orders that would take the gross exposure above `max_leverage` = 1.05 times the book's gross bound are scaled down and logged); 4. the forced exit of an instrument in its last bar at `close * (1 + delist_return)`; 5. accruals (borrow, financing, interest); 6. the mark to the close; then, on a decision bar, the decision. The accounting identity of the contract is asserted on every bar to `1e-9 * max(1, |E|)`; an independent validator re-derives positions, cash, every flow, and the identity from the CSV logs, the bars, and the corporate actions.
+1. Splits effective in the bar rescale the opening quantity, the previous close, and pending orders; 2. dividends on the opening quantity before the split, credited at the close; 3. fills of the orders submitted at the previous decision at the bar's open (participation cap from the bar's volume, the rest canceled; nothing fills without a bar or in a zero-volume bar; orders that would take the gross exposure above `max_leverage` = 1.05 times the book's gross bound are scaled down and logged); 4. the forced exit of an instrument in its last bar at `close * (1 + delist_return)`; 5. accruals (borrow, financing, interest); 6. the mark to the close; then, on a decision bar, the decision. The accounting identity of the contract is asserted on every bar to `1e-9 * max(1, |E|)`; an independent validator re-derives positions, cash, every flow, and the identity from the CSV logs, the bars, and the corporate actions.
 
 ## Logs
 

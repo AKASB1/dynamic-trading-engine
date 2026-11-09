@@ -1,0 +1,32 @@
+vars: {
+  d2-config: {
+    sketch: true
+    layout-engine: elk
+    pad: 24
+  }
+}
+classes: {
+  comp: {style: {fill: "#DDF2E3"; stroke: "#2E7D4A"; stroke-width: 2; font-size: 22; font-color: "#1F2328"; border-radius: 6}}
+  ext: {style: {fill: "#FFFFFF"; stroke: "#57606A"; stroke-width: 2; font-size: 22; font-color: "#1F2328"}}
+  store: {shape: cylinder; style: {fill: "#FFFFFF"; stroke: "#2E7D4A"; stroke-width: 2; font-size: 22; font-color: "#1F2328"}}
+  flow: {style: {stroke: "#424A53"; stroke-width: 2; font-size: 22; font-color: "#1F2328"}}
+}
+direction: right
+
+market: "synthetic market\ncontract files" {class: store}
+truth: "truth, kept apart\ns · m · regime" {class: ext}
+state: "DecisionState\nknown at t\nreplay-audited" {class: comp}
+loop: "rolling loop\nfills · accounting" {class: comp}
+pipeline: "forecast → risk\n→ optimizer" {class: comp}
+validator: "independent\nvalidator" {class: comp}
+evaluation: "evaluation\nce_ann · paired tests" {class: comp}
+execution: "execution simulator\nAlmgren–Chriss" {class: comp}
+
+market -> state {class: flow}
+market -> loop {class: flow}
+state -> pipeline {class: flow}
+loop <-> pipeline: decisions {class: flow}
+loop -> validator: logs {class: flow}
+loop -> evaluation: returns {class: flow}
+truth -> evaluation {class: flow}
+loop -> execution: orders {class: flow}

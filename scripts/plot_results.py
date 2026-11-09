@@ -253,6 +253,78 @@ def exact_table(res, out, tag, note):
     save(fig, out, "exact_references.png")
 
 
+README_RC = {
+    "font.size": 9.5,
+    "axes.titlesize": 11,
+    "axes.labelsize": 11,
+    "xtick.labelsize": 9.5,
+    "ytick.labelsize": 9.5,
+    "legend.fontsize": 9.5,
+    "axes.spines.top": False,
+    "axes.spines.right": False,
+    "axes.facecolor": SURF,
+}
+
+
+def save_readme(fig, out, name):
+    os.makedirs(out, exist_ok=True)
+    p = os.path.join(out, name)
+    fig.savefig(p, dpi=110, facecolor=SURF, metadata={"Software": None})
+    plt.close(fig)
+    print(p)
+
+
+def readme_figures(res, out, tag, note):
+    """README versions at README font sizes (880 px wide at 110 dpi; text 9.5 pt, titles 11 pt).
+
+    S3: the tuned MV's ce_ann by the optimizer's cost scale (the right panel of
+    s3_cost_frontier.png). S7(d): the shortfall decomposition by policy at 2 % of ADV (the
+    right panel of s7_execution.png)."""
+    with plt.rc_context(README_RC):
+        rows = read(os.path.join(res, f"s3{tag}.csv"))
+        cs = [r for r in rows if r["variant"].startswith("cost_scale=") or r["variant"] == "parity"]
+        xs = [1.0 if r["variant"] == "parity" else f(r["variant"].split("=")[1]) for r in cs]
+        order = sorted(range(len(cs)), key=lambda i: xs[i])
+        fig, ax = plt.subplots(figsize=(8.0, 3.6), facecolor=SURF)
+        ax.errorbar(
+            [xs[i] for i in order],
+            [f(cs[i]["ce_ann_mean"]) for i in order],
+            yerr=[f(cs[i]["ce_ann_ci95"]) for i in order],
+            fmt="o-",
+            color=C[0],
+            capsize=3,
+        )
+        ax.axhline(0, color=INK2, linewidth=1, linestyle="--")
+        ax.set_xscale("symlog", linthresh=0.25)
+        ax.set_xticks([0, 0.25, 0.5, 1, 2, 4], ["0", "0.25", "0.5", "1", "2", "4"])
+        ax.set_xlabel("optimizer's cost scale (1 = the simulator's costs)")
+        ax.set_ylabel("ce_ann (mean, 95% CI)")
+        ax.set_title(f"S3: tuned MV, 20 seeds; the simulator always charges the true costs{note}")
+        ax.grid(alpha=0.3)
+        fig.tight_layout()
+        save_readme(fig, out, "readme_s3.png")
+
+        dec = read(os.path.join(res, f"s7_decomposition{tag}.csv"))
+        comps = ["temporary_bps", "spread_bps", "commission_bps", "timing_bps"]
+        fig, ax = plt.subplots(figsize=(8.0, 3.8), facecolor=SURF)
+        bottom_pos = [0.0] * len(dec)
+        bottom_neg = [0.0] * len(dec)
+        for k, cpt in enumerate(comps):
+            vals = [f(r[cpt]) for r in dec]
+            b = [bp if v >= 0 else bn for v, bp, bn in zip(vals, bottom_pos, bottom_neg)]
+            ax.bar(range(len(dec)), vals, bottom=b, color=C[k], label=cpt.replace("_bps", ""))
+            bottom_pos = [bp + max(v, 0) for v, bp in zip(vals, bottom_pos)]
+            bottom_neg = [bn + min(v, 0) for v, bn in zip(vals, bottom_neg)]
+        ax.set_xticks(range(len(dec)), [r["policy"] for r in dec])
+        ax.set_ylabel("mean shortfall, bps")
+        ax.set_title(f"S7(d): shortfall by component, square-root impact, 2% of ADV{note}")
+        ax.legend(ncol=4, loc="upper center", frameon=False)
+        ax.set_ylim(top=max(bottom_pos) * 1.25)
+        ax.grid(axis="y", alpha=0.3)
+        fig.tight_layout()
+        save_readme(fig, out, "readme_s7.png")
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true")
@@ -271,7 +343,7 @@ def main(argv=None) -> int:
             "",
             "",
         )
-    for fn in (ladder, cost_frontier, shift, horizon, execution, exact_table):
+    for fn in (ladder, cost_frontier, shift, horizon, execution, exact_table, readme_figures):
         fn(res, out, tag, note)
     return 0
 
